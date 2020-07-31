@@ -2,6 +2,24 @@
 
 [This website](https://volkovbos.github.io/milestone2_are_you_a_hero/index.html) was created for everyone who is an MCU or comics fan, as me. It gives you some brief information about why I like it so much and some information about the characters in the movies. And as last a simple but enjoyable game to see which character matches with your answers on a few questions.
 
+## DESIGN
+
+### FRAMEWORK
+
+I used Bootstrap for the navbar and for the modals.
+
+### COLOR SCHEME
+
+The color scheme I chose is a grey palette.
+
+-   `#777777`   (light grey)
+-   `#F0131E`   (Marvel red)
+-   `#FFF`      (white fonts)
+-   `#2B2B2B`   (darkest grey, shadows)
+
+As the main font I chose for the [Avengero Font](https://fontmeme.com/fonts/avengero-font/) designed by Gene Buban.
+For the secondary font I used Comic Sans Ms, not ofter used but for the subject of this website very justifiable, and gives a playful character.
+
 
 ### WIREFRAMES
 
