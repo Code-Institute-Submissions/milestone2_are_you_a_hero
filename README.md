@@ -38,14 +38,15 @@ This site is for general users who want to have a bit of fun and play a simple g
 -   As a general user, I want to get in contact with the creator of the website.
 
 ## Features
-
-## Features To do
 -   On all pages there is a clear and obvious menu for the three pages.
 -   A navigation menu, which changes to a hamburger menu on smaller screens.
 -   A navigation menu, which sticks on the top of the page. And a footer which sticks in the bottom of the screen.
 -   When you have the hamburger menu on smaller screens, you get a dropdown menu when clicking the hamburger icon.
 -   In the footer there is a email API functionality, by means of a bootstrap modal.
 -   In the footer you have the option to play the Avengers Theme song.
+
+## Features To do
+-   I would like to have the music play accross the site, even if you change pages within the website.
 -   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
 
 
