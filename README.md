@@ -1,1 +1,31 @@
-# milestone2_are_you_a_hero
+# Milestone2 Marvelfun
+
+[This website](https://volkovbos.github.io/milestone2_are_you_a_hero/index.html) was created for everyone who is an MCU or comics fan, as me. It gives you some brief information about why I like it so much and some information about the characters in the movies. And as last a simple but enjoyable game to see which character matches with your answers on a few questions.
+
+
+### WIREFRAMES
+
+I used MS Excel to create my wireframes and put them in a separate folder [Wireframes](https://github.com/VolkovBos/milestone2_are_you_a_hero/tree/master/wireframes).
+
+
+## UX
+
+This site is for general users who want to have a bit of fun and play a simple game in the form of a questionnaire.
+
+### USER STORIES
+
+-   As a general user, I want to find some information on the MCU character, so I can have some recreational time.
+-   As a general user, I want to play a game, so I can see which character matches with me.
+-   As a general user, I want to see the given information in my own language, so I can understand what it says.
+-   As a general user, I want to get in contact with the creator of the website.
+
+## Features
+
+## Features To do
+-   On all pages there is a clear and obvious menu for the three pages.
+-   A navigation menu, which changes to a hamburger menu on smaller screens.
+-   A navigation menu, which sticks on the top of the page. And a footer which sticks in the bottom of the screen.
+-   When you have the hamburger menu on smaller screens, you get a dropdown menu when clicking the hamburger icon.
+-   In the footer there is a email API functionality, by means of a bootstrap modal.
+-   In the footer you have the option to play the Avengers Theme song.
+-   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
