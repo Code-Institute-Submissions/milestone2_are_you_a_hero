@@ -29,3 +29,30 @@ This site is for general users who want to have a bit of fun and play a simple g
 -   In the footer there is a email API functionality, by means of a bootstrap modal.
 -   In the footer you have the option to play the Avengers Theme song.
 -   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
+
+
+### Pages
+
+-   [index.html](https://volkovbos.github.io/milestone2_are_you_a_hero/index.html)
+
+    -   There is an introduction why I/m a fan of the MCU and what you can find on this site.
+
+-   [play.html](https://volkovbos.github.io/milestone2_are_you_a_hero/play.html)
+
+    -   you can play a game, which contains a set of questions and at the end you'll get a result
+
+-   [result.html](https://volkovbos.github.io/milestone2_are_you_a_hero/result.html)
+
+    -   The result page of the game, with the character who fits the most with the given answers.
+    -   A brief sound is played of the character shown.
+
+-   [heroes.html](https://volkovbos.github.io/milestone2_are_you_a_hero/heroes.html)
+
+    -   A set of cards with some of my favorite heroes of the MCU.
+    -   On the cards are shown an image, the name and a second name of the character.
+    -   On the card is a info button, which opens a modal wit more information about the character in the MCU.
+
+-   [villains.html](https://volkovbos.github.io/milestone2_are_you_a_hero/villains.html)
+    -   A set of cards with some of my favorite villains of the MCU.
+    -   On the cards are shown an image, the name and a second name of the character.
+    -   On the card is a info button, which opens a modal wit more information about the character in the MCU.
