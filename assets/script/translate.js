@@ -26,7 +26,7 @@ function translate() {
         var trans;
 
         // Translation from JSON file
-        $.getJSON("../assets/language/translation.json", (json) => {
+        $.getJSON("assets/language/translation.json", (json) => {
             const trans = json[current_lang][key];
             $(this).html(trans);
 

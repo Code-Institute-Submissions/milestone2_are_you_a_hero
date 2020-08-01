@@ -6,7 +6,7 @@
 
 ### FRAMEWORK
 
-I used Bootstrap for the navbar and for the modals.
+I used Bootstrap for the navbar, the modals and the cards. I used the bootstrap cards to give a nice contrast with the darker barkground image.
 
 ### COLOR SCHEME
 
@@ -48,6 +48,10 @@ This site is for general users who want to have a bit of fun and play a simple g
 ## Features To do
 -   I would like to have the music play accross the site, even if you change pages within the website.
 -   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
+-   I want to put the languages in seperate JSON files.
+-   I want to let the German text checked on grammar and spelling.
+-   Replace JSON file translation with a Google translation API.
+-   Introduce sounds when answering questions.
 
 
 ### Pages
@@ -75,3 +79,132 @@ This site is for general users who want to have a bit of fun and play a simple g
     -   A set of cards with some of my favorite villains of the MCU.
     -   On the cards are shown an image, the name and a second name of the character.
     -   On the card is a info button, which opens a modal wit more information about the character in the MCU.
+
+
+    ## Technologies Used
+
+Brief overview of the languages, frameworks, and other tools I've used on this project:
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+    -   Semantic markup language as the shell of the site
+
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+    -   Cascading Style Sheets as the design of the site
+
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+    -   to make the website interactive
+
+-   [JSON](https://en.wikipedia.org/wiki/JSON)
+
+    -   for my variables
+    -   translation file
+
+-   [Bootstrap](<https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)>)
+
+    -   Components (tables and menu)
+
+-   [Jasmin](<https://en.wikipedia.org/wiki/Jasmine_(JavaScript_testing_framework)>)
+
+    -   for testing my JavaScript functions
+
+-   [jQuery](https://jquery.com/)
+
+    -   to simplify DOM manipulation
+
+-   [Font Awesome](https://fontawesome.com)
+
+    -   Use of social media icons
+
+-   [Favicon](https://www.w3.org/2005/10/howto-favicon)
+
+    -   Use of the favicon on the browser tab
+
+-   [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator)
+
+    -   Update of the Avengero font to use it in Firefox and IE
+
+-   [Visual Studio Code](https://code.visualstudio.com/)
+
+    -   For my development environment
+
+-   [Google](https://developers.google.com/web/tools/chrome-devtools/)
+
+    -   For my developing
+    -   For my testing
+
+-   [Github](https://github.com/)
+
+    -   Version control
+    -   Share public site
+
+-   [EmailJS](https://www.emailjs.com/)
+    -   for the contact email functionality
+
+## TESTING
+
+### TEST MATRIX
+
+I used a testing matrix in Excel to test the script across several browsers and devices.
+
+### COMBATIBILITY
+
+### NOTED ISSUES
+
+-   The Avengero Fonts are not working in Safari as of the current commit. (resolved)
+-   The fonts are not working on mobile as of the current commit. (resolved)
+-   Comic sans font not working on mobile
+-   Hero modals on mobile not working correclty. (resolved)
+-   Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (resolved by changing the path to "assets/language/translation.json")
+
+## DEPLOYMENT
+
+This project was created using Github.
+From there I used Visual Studio Code to write my code.
+Then I used commits to git followed by pushes to my GitHub repository.
+
+As my final step I've deployed this project to GitHub Pages from the GitHub repository using the following steps:
+
+1. Login to my GitHub account
+2. Go to the [milestone2_marvelfun](https://volkovbos.github.io/milestone2_marvelfun) repository
+3. Go to the settings-tab
+4. Scroll down to the GitHub Pages section
+5. At the GitHub Pages section, choose "master branch" as your source
+6. The page will now automatically refresh and the repository deployed
+7. You can now scroll down again to the GitHub Pages section to retrieve the link for the website
+
+To run this project locally the following steps should be followed:
+
+1. You can follow [milestone2_marvelfun](https://volkovbos.github.io/milestone2_marvelfun) to my repository
+2. Click on the green colored button "Clone or download"
+3. Copy the URL that pops up
+4. In your local IDE open Git Bash
+5. The next step is to change your current working directory to the location you want for your cloned directory
+6. Now type in "git clone" and paste the copied URL
+7. When you press Enter your local clone will be created
+
+For this project, local deployment was not required.
+
+## CREDITS
+
+The idea for this page was written by myself.
+
+### Content
+
+The text for the heroes and villains modals I used from the [FANDOM](https://marvelcinematicuniverse.fandom.com/).
+
+### Media
+
+The background image I got from [Wallpaperaccess](https://wallpaperaccess.com/mcu).
+
+All the hero and villain images I got from [Marvel](https://www.marvel.com/), non-commercial usage.
+
+### Acknowledgements
+
+[w3schools](https://www.w3schools.com/) and [StackOverflow](https://stackoverflow.com/) for research.
+
+Thanks to [Tim Nelson](https://github.com/TravelTimN/ci-milestone01-ucfd) for the testing matrix.
+
+Thanks to [Tim (Justim)](https://github.com/justim) for some deeper explanation and clarity about using JSON files with JavaScript and JQuery.
