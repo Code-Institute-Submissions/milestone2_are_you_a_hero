@@ -1,6 +1,9 @@
 /*---------- General ----------*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+/*---------- General ----------*/
+
 @font-face {
     font-family: 'avengeroregular';
     src: url('fonts/avengero-webfont.woff2') format('woff2'), url('fonts/avengero-webfont.woff') format('woff'), url('fonts/Avengero.ttf') format('ttf');
@@ -38,7 +41,7 @@ body::after {
     background: url("../../media/images/460336.jpg") repeat center center;
     background-size: 200px;
     content: "";
-    opacity: 0.8;
+    opacity: 0.9;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -130,7 +133,8 @@ footer {
     text-align: center;
     bottom: 0;
     width: -webkit-fill-available;
-    position: absolute;
+    position: sticky;
+    /*position: absolute;*/
 }
 
 a {
@@ -174,4 +178,40 @@ footer:hover .emphasize {
     border-radius: 5px;
     text-align: center;
     font-family: Arial, Verdana, sans-serif;
+}
+
+
+/*---------- Index page ----------*/
+
+.card-index {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: #F0131E 5px ridge;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+h3 {
+    padding: 10px;
+    line-height: 2em;
+    text-align: center;
+    font-size: larger;
+    color: #F0131E;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+#frontpageimage1,
+#frontpageimage2 {
+    width: 20em;
+}
+
+#frontpageimage1 {
+    float: right;
+}
+
+#frontpageimage2 {
+    float: left;
 }
