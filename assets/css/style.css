@@ -215,3 +215,123 @@ h3 {
 #frontpageimage2 {
     float: left;
 }
+
+
+/*---------- Heroes/villains page ----------*/
+
+#container {
+    display: flex;
+    /* makes container a flexbox*/
+    flex-flow: row wrap;
+    /* layout the boxes in rows and wrap them*/
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1050px;
+    position: relative;
+}
+
+.character-card {
+    flex: 1;
+    display: flex;
+    /* make the contents controllable by flexbox*/
+    flex-flow: column;
+    min-width: 240px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.card_image {
+    width: 100%;
+}
+
+h2 {
+    margin-top: 2em;
+    font-size: .8em;
+    text-align: left;
+    color: #F0131E;
+}
+
+.card_bottom {
+    display: flex;
+    flex-flow: column;
+}
+
+.card_head {
+    flex: 0;
+}
+
+.card_para {
+    flex: 1 0 auto;
+}
+
+
+/*----- Heroes/villains Modal ----*/
+
+.modal-hero {
+    width: 80%;
+    max-width: none;
+}
+
+.modal_body {
+    height: 2em;
+    width: 80%;
+}
+
+.modal_top {
+    height: 2em;
+    margin: auto;
+}
+
+th {
+    text-decoration: underline;
+}
+
+.modal_image {
+    width: 50%;
+    float: left;
+    border: #F0131E 4px inset;
+    border-radius: 30px;
+}
+
+.modal_stats {
+    height: auto;
+    width: 40%;
+    float: right;
+}
+
+.modal_stats table {
+    width: 80%;
+    text-align: center;
+    font-family: 'Comic Sans Ms';
+    font-size: 12pt;
+}
+
+.modal_quote {
+    margin-top: 2em;
+    text-align: center;
+    line-height: 2em;
+    font-size: 70%;
+    float: left;
+}
+
+.modal_bottom {
+    padding-top: 10px;
+    clear: both;
+    height: auto;
+    width: auto;
+}
+
+.modal_copy {
+    color: #000;
+}
+
+.modal_copy a {
+    color: mediumblue;
+}
+
+.modal_text {
+    font-family: Comic Sans Ms;
+    font-size: 1em;
+}

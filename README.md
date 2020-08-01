@@ -193,7 +193,7 @@ The idea for this page was written by myself.
 
 ### Content
 
-The text for the heroes and villains modals I used from the [FANDOM](https://marvelcinematicuniverse.fandom.com/).
+The text for the heroes and villains modals I used from the [FANDOM](https://marvelcinematicuniverse.fandom.com/) and referenced it like stated in the [licensing statement](https://www.fandom.com/licensing/) under section USING FANDOM CONTENT.
 
 ### Media
 
