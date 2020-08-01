@@ -202,6 +202,8 @@ The background image I got from [Wallpaperaccess](https://wallpaperaccess.com/mc
 
 All the hero and villain images I got from [Marvel](https://www.marvel.com/), non-commercial usage.
 
+The flags I used from [Country Flags](https://www.countryflags.com/).
+
 ### Acknowledgements
 
 [w3schools](https://www.w3schools.com/) and [StackOverflow](https://stackoverflow.com/) for research.
