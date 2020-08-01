@@ -331,7 +331,7 @@ th {
 }
 
 .modal_text {
-    font-family: Comic Sans Ms;
+    font-family: 'comic_sans_msregular', Roboto, Arial;
     font-size: 1em;
 }
 
