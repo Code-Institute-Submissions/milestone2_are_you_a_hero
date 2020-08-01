@@ -82,7 +82,7 @@ function switchToWinner() {
 }
 
 $(document).ready(function() {
-    $(sessionStorage.getItem(1)).css("display", "block");
+    $(sessionStorage.getItem(1)).css("display", "contents");
 });
 
 $(document).ready(function() {
