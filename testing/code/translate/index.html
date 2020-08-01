@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Jasmine Testing</title>
+
+    <!-- Load Jasmine Framwork -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.js" integrity="sha256-PePX8Jc4TIxzzVz0Qe4NsH3OUU8+Y49DBWvYgggNqkY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine-html.js" integrity="sha256-qazAASTTgUrq9SOYkPSB3oEuqbhn+2j4kxGkVZ0GKjY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.js" integrity="sha256-HG8TKl0T65NyELmbUoo0H7/a1e++smYdXXtuuEsyKok=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.css" integrity="sha256-YzqdEMEXu1sH1t2Y9tk3XhKhxy1xMWvcA1koZx43k+8=" crossorigin="anonymous" />
+
+    <!-- Load Scripts -->
+    <!-- Scripts -->
+    <script src="../../../assets/script/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap script for header menu collapse -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Translation of the website -->
+    <script src="translate.js"></script>
+
+    <!-- Load Tests -->
+    <script type="text/javascript" src="translateSpec.js"></script>
+
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-bg fixed-top">
+
+        <!-- Logo -->
+        <div class="navbar-brand"></div>
+
+        <!-- Hamburger menu -->
+        <button class="custom-toggler navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu items, slash only shown when not collapsed -->
+        <div class="navbar-collapse flex-row-reverse collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a data-translate="villains" class="nav-link" href="villains.html">Villains</a>
+                </li>
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a data-translate="flag" onclick="change_lang()"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+</html>
