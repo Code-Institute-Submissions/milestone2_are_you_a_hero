@@ -265,7 +265,7 @@ button {
 .loki,
 .captain_america,
 .iron_man {
-    display: none;
+    display: none !important;
 }
 
 
