@@ -158,6 +158,7 @@ I used a testing matrix in Excel to test the script across several browsers and 
 -   Comic sans font not working on mobile
 -   Hero modals on mobile not working correclty. (resolved)
 -   Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (resolved by changing the path to "assets/language/translation.json")
+-   Flags noyt always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG.
 
 ## DEPLOYMENT
 
