@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Title of tab/page -->
+    <title data-translate="title">Are you a hero ?</title>
+
+    <!-- Resources -->
+    <script src="https://kit.fontawesome.com/66313a0c43.js" rel="stylesheet"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon Code from https://www.w3.org/2005/10/howto-favicon -->
+    <link rel="icon" type="image/png" href="media/images/avengers.png">
+    <link rel="profile" href="http://www.w3.org/2005/10/profile" />
+
+    <!-- Scripts -->
+    <script src="assets/script/jquery-3.5.1.min.js"></script>
+
+    <!-- EmailJS API-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_VWTMl2a56d4w3kUKpKAyq");
+        })();
+    </script>
+
+    <!--https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click-->
+    <script>
+        function play() {
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+                $('#play').removeClass('fa-volume-mute');
+                $('#play').addClass('fa-volume-up');
+
+            } else {
+                audio.pause();
+                $('#play').addClass('fa-volume-mute');
+                $('#play').removeClass('fa-volume-up');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-bg fixed-top">
+
+            <!-- Logo -->
+            <div class="navbar-brand">Superhero</div>
+
+            <!-- Hamburger menu -->
+            <button class="custom-toggler navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu items, slash only shown when not collapsed -->
+            <div class="navbar-collapse flex-row-reverse collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a data-translate="home" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item hideoncollapse" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link seperator" href="#">/</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a data-translate="play" class="nav-link active" href="play.html">Play</a>
+                    </li>
+                    <li class="nav-item hideoncollapse" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link seperator" href="#">/</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a data-translate="heroes" class="nav-link" href="heroes.html">Heroes</a>
+                    </li>
+                    <li class="nav-item hideoncollapse" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link seperator" href="#">/</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a data-translate="villains" class="nav-link" href="villains.html">Villains</a>
+                    </li>
+                    <li class="nav-item hideoncollapse" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link seperator" href="#">/</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a data-translate="flag" onclick="change_lang()"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="container">
+        <div class="card character-card iron_man">
+            <img class="card_image" src="media/images/iron_man.jpg" alt="iron_man" />
+            <div class="card_bottom">
+                <h2 class="card_head">Iron Man</h2>
+                <p class="card_para">Tony Stark</p>
+
+                <!-- Button trigger modal -->
+                <button id="btn1" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal1" value="1">
+                    Info
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-hero" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Iron Man</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="modal_top">
+                                    <img class="modal_image" src="media/images/iron_man.jpg" alt="iron_man">
+                                    <div class="modal_stats">
+                                        <table>
+                                            <tr>
+                                                <th data-translate="strengthsHeader"></th>
+                                                <th>|</th>
+                                                <th data-translate="weaknessHeader"></th>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength1_11"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness1_11"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength2_11"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness2_11"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength3_11"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness3_11"></td>
+                                            </tr>
+                                        </table>
+                                        <h3 data-translate="quote11" class="modal_quote"></h3>
+                                    </div>
+                                </div>
+                                <div class="modal_bottom">
+                                    <p data-translate="copyright11" class="modal_copy"></p>
+                                    <p data-translate="text11" class="modal_text"><br/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button data-translate="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card character-card captain_america">
+            <img class="card_image" src="media/images/captain_america.jpg" alt="captain_america" />
+            <div class="card_bottom">
+                <h2 class="card_head">Captain America</h2>
+                <p class="card_para">Steve Rogers</p>
+
+                <!-- Button trigger modal -->
+                <button id="btn2" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal2" value="2">
+                    Info
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-hero" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Captain America</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="modal_top">
+                                    <img class="modal_image" src="media/images/captain_america.jpg" alt="captain_america">
+                                    <div class="modal_stats">
+                                        <table>
+                                            <tr>
+                                                <th data-translate="strengthsHeader"></th>
+                                                <th>|</th>
+                                                <th data-translate="weaknessHeader"></th>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength1_12"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness1_12"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength2_12"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness2_12"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength3_12"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness3_12"></td>
+                                            </tr>
+                                        </table>
+                                        <h3 data-translate="quote12" class="modal_quote"></h3>
+                                    </div>
+                                </div>
+                                <div class="modal_bottom">
+                                    <p data-translate="copyright12" class="modal_copy"></p>
+                                    <p data-translate="text12" class="modal_text"><br/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button data-translate="close" type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card character-card thanos">
+            <img class="card_image" src="media/images/thanos.jpg" alt="thanos" />
+            <div class="card_bottom">
+                <h2 class="card_head">Thanos</h2>
+                <p class="card_para">Mad Titan</p>
+
+                <!-- Button trigger modal -->
+                <button id="btn1" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal1" value="1">
+                    Info
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-hero" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Thanos</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="modal_top">
+                                    <img class="modal_image" src="media/images/thanos.jpg" alt="thanos">
+                                    <div class="modal_stats">
+                                        <table>
+                                            <tr>
+                                                <th data-translate="strengthsHeader"></th>
+                                                <th>|</th>
+                                                <th data-translate="weaknessHeader"></th>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength1_1"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness1_1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength2_1"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness2_1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength3_1"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness3_1"></td>
+                                            </tr>
+                                        </table>
+                                        <h3 data-translate="quote1" class="modal_quote"></h3>
+                                    </div>
+                                </div>
+                                <div class="modal_bottom">
+                                    <p data-translate="copyright1" class="modal_copy"></p>
+                                    <p data-translate="text1" class="modal_text"><br/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button data-translate="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card character-card loki">
+            <img class="card_image" src="media/images/loki.jpg" alt="loki" />
+            <div class="card_bottom">
+                <h2 class="card_head">Loki</h2>
+                <p class="card_para">God of Mischief</p>
+
+                <!-- Button trigger modal -->
+                <button id="btn2" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal2" value="2">
+                    Info
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-hero" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Loki</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="modal_top">
+                                    <img class="modal_image" src="media/images/loki.jpg" alt="loki">
+                                    <div class="modal_stats">
+                                        <table>
+                                            <tr>
+                                                <th data-translate="strengthsHeader"></th>
+                                                <th>|</th>
+                                                <th data-translate="weaknessHeader"></th>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength1_2"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness1_2"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength2_2"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness2_2"></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="strength3_2"></td>
+                                                <td>|</td>
+                                                <td data-translate="weakness3_2"></td>
+                                            </tr>
+                                        </table>
+                                        <h3 data-translate="quote2" class="modal_quote"></h3>
+                                    </div>
+                                </div>
+                                <div class="modal_bottom">
+                                    <p data-translate="copyright2" class="modal_copy"></p>
+                                    <p data-translate="text2" class="modal_text"><br/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button data-translate="close" type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card character-card iron_man">
+            <h2 class="card_head">Your resulrt</h2>
+            <p class=".iron_man">You want to do the right thing, but not at all cost and only if you get some glory...</p>
+            <p class=".captain_america">You only want to do the right thing...</p>
+            <p class=".loki">Whatever you say or do, you cannot be thrusted....</p>
+            <p class=".thanos">You only want to bring balance to the universe...</p>
+        </div>
+    </div>
+
+
+
+    <footer id="result-footer">
+        <a href="https://github.com/VolkovBos" target="_blank" class="emphasize">Robbert Bos</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
+        <a href="#"></a><i class="fas fa-address-card" data-toggle="modal" data-target="#myModal" title="Contact me!"></i></a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
+        <audio src="media/sounds/The-Avengers-Theme-Song.mp3" id="audio"></audio>
+        <i class="fas fa-volume-mute" id="play" onclick="play()" title="Avengers Theme Song !"></i>
+    </footer>
+
+    <!-- Modal outside the footer element due to the sticky position of the footer -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" id="modal-content">
+                <div class="modal-body modal-contact">
+                    <h2 data-translate="contact">Contact me</h2>
+                    <form onsubmit="return sendMail(this);">
+                        <input data-translate="name" type="text" id="name" name="name" placeholder="Name" required><br>
+                        <input data-translate="email" type="email" id="email" name="email" placeholder="Email" required><br>
+                        <textarea data-translate="message" rows="3" id="message" name="message" placeholder="Message" required></textarea>
+                        <button data-translate="submit" type="submit" class="submit-btn btn btn-warning">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Counter for the questions/answers and hiding/showing other questions -->
+    <script type="text/javascript" src="assets/script/counter.js"></script>
+
+    <!-- Bootstrap script for header menu collapse -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- EmailJS API, sends email to owner of site -->
+    <script type="text/javascript" src="assets/script/contactMail.js"></script>
+
+    <!-- Translation of the website -->
+    <script src="assets/script/translate.js"></script>
+</body>
+
+</html>

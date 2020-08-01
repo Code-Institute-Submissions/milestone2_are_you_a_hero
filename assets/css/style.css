@@ -155,6 +155,11 @@ footer:hover .emphasize {
     cursor: pointer;
 }
 
+#play-footer,
+#result-footer {
+    position: absolute;
+}
+
 
 /*---------- Footer Modal ----------*/
 
@@ -213,6 +218,54 @@ h3 {
 
 #frontpageimage2 {
     float: left;
+}
+
+
+/*---------- Play/result page ----------*/
+
+.questions {
+    text-align: center;
+}
+
+#card-question {
+    margin: auto;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    font-size: larger;
+    color: #F0131E;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin: 10px;
+}
+
+button {
+    text-transform: lowercase;
+}
+
+.question {
+    display: block;
+}
+
+.question1,
+.question2,
+.question3,
+.question4,
+.question5,
+.question6,
+.question7 {
+    display: none;
+}
+
+.thanos,
+.loki,
+.captain_america,
+.iron_man {
+    display: none;
 }
 
 
