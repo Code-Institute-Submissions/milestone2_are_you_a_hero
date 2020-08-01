@@ -335,3 +335,82 @@ th {
     font-family: Comic Sans Ms;
     font-size: 1em;
 }
+
+@media screen and (max-width: 991px) {
+    /*---------- Menu ----------*/
+    /* hiding the slashes when menu is collapsed */
+    .hideoncollapse {
+        display: none;
+        width: 0px;
+    }
+    /*---------- Footer ----------*/
+    footer {
+        line-height: 3rem;
+        font-size: 0.5rem;
+    }
+    footer i {
+        font-size: 1rem;
+    }
+    .emphasize {
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
+    }
+    footer:hover .emphasize {
+        letter-spacing: 0px;
+    }
+    /*---------- Index page ----------*/
+    #frontpageimage1 {
+        width: 15em;
+    }
+    #frontpageimage2 {
+        width: 15em;
+    }
+    h3 {
+        font-size: smaller;
+        line-height: 1.5em;
+    }
+    .card-index {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /*---------- Index page ----------*/
+    .card-index img {
+        position: absolute;
+        opacity: 0.2;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    #frontpageimage1 {
+        margin-top: 100px;
+    }
+    #frontpageimage2 {
+        margin-top: 30px;
+    }
+    /*----- Heroes/villains Modal ----*/
+    .modal_image {
+        /*height: auto;*/
+        width: 80%;
+        margin-left: 25px;
+    }
+    .modal_stats {
+        float: none;
+        margin: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    /*---------- Menu ----------*/
+    .navbar-brand {
+        font-size: 100%;
+        letter-spacing: 0.3em;
+    }
+    /*----- Heroes/villains Modal ----*/
+    .modal-hero {
+        width: 100%;
+        margin: auto;
+    }
+}
