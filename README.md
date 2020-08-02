@@ -1,4 +1,4 @@
-# Milestone2 Marvelfun
+# Milestone2 Are you a hero ?
 
 [This website](https://volkovbos.github.io/milestone2_are_you_a_hero/index.html) was created for everyone who is an MCU or comics fan, as me. It gives you some brief information about why I like it so much and some information about the characters in the movies. And as last a simple but enjoyable game to see which character matches with your answers on a few questions.
 
