@@ -32,6 +32,8 @@ This site is for general users who want to have a bit of fun and play a simple g
 
 ### USER STORIES
 
+-   As a general user, I want to navigate through the site in an orderly fashion, so I can see which information is on the site.
+-   As a general user, I want to navigate through the site in an orderly fashion on a mobile view, so I can use the menu and the site on a mobile screen.
 -   As a general user, I want to find some information on the MCU character, so I can have some recreational time.
 -   As a general user, I want to play a game, so I can see which character matches with me.
 -   As a general user, I want to see the given information in my own language, so I can understand what it says.
@@ -44,14 +46,15 @@ This site is for general users who want to have a bit of fun and play a simple g
 -   When you have the hamburger menu on smaller screens, you get a dropdown menu when clicking the hamburger icon.
 -   In the footer there is a email API functionality, by means of a bootstrap modal.
 -   In the footer you have the option to play the Avengers Theme song.
+-   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
+-   Click sounds when answering questions, clicking buttons.
+
 
 ## Features To do
 -   I would like to have the music play accross the site, even if you change pages within the website.
--   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
 -   I want to put the languages in seperate JSON files.
 -   I want to let the German text checked on grammar and spelling.
 -   Replace JSON file translation with a Google translation API.
--   Introduce sounds when answering questions.
 
 
 ### Pages
@@ -204,6 +207,8 @@ The background image I got from [Wallpaperaccess](https://wallpaperaccess.com/mc
 All the hero and villain images I got from [Marvel](https://www.marvel.com/), non-commercial usage.
 
 The flags I used from [Country Flags](https://www.countryflags.com/).
+
+The mouseclick sound I used from [fesliyanstudios](https://www.fesliyanstudios.com), her is there non-commercial use [policy](https://www.fesliyanstudios.com/policy). I edited the mp3 to let the click directly start.
 
 ### Acknowledgements
 
