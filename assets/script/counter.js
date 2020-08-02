@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     // Function to hide the answered questions and show the following question
     $(".questions").find(".btn").click(function() {
-        var audio = new Audio("media/sounds/Naamloos.mp3");
+        var audio = new Audio("media/sounds/ouseClick.mp3");
         /* https://www.w3schools.com/tags/av_prop_volume.asp */
         audio.volume = 0.4;
         audio.play();
