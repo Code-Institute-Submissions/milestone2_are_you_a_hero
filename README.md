@@ -173,7 +173,7 @@ Then I used commits to git followed by pushes to my GitHub repository.
 As my final step I've deployed this project to GitHub Pages from the GitHub repository using the following steps:
 
 1. Login to my GitHub account
-2. Go to the [milestone2_marvelfun](https://volkovbos.github.io/milestone2_marvelfun) repository
+2. Go to the [milestone2 are you a hero](https://volkovbos.github.io/milestone2_are_you_a_hero) repository
 3. Go to the settings-tab
 4. Scroll down to the GitHub Pages section
 5. At the GitHub Pages section, choose "master branch" as your source
@@ -182,7 +182,7 @@ As my final step I've deployed this project to GitHub Pages from the GitHub repo
 
 To run this project locally the following steps should be followed:
 
-1. You can follow [milestone2_marvelfun](https://volkovbos.github.io/milestone2_marvelfun) to my repository
+1. You can follow [milestone2 are you a hero](https://volkovbos.github.io/milestone2_are_you_a_hero) to my repository
 2. Click on the green colored button "Clone or download"
 3. Copy the URL that pops up
 4. In your local IDE open Git Bash
