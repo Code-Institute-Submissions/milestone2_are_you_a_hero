@@ -152,8 +152,8 @@ I used a testing matrix in Excel to test the script across several browsers and 
 - [x] Flags not always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG. (resolved)
 - [x] Modals of Thanos and Loki on result page not working. (resolved)
 
-- [] On mobile the result page footer doesn't render correct.
-- [] The message of the email API isn't shown in the actual email.
+- [ ] On mobile the result page footer doesn't render correct.
+- [ ] The message of the email API isn't shown in the actual email.
 
 ## DEPLOYMENT
 This project was created using Github.
