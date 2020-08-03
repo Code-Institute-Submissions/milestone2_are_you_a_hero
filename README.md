@@ -2,15 +2,14 @@
 
 [This website](https://volkovbos.github.io/milestone2_are_you_a_hero/index.html) was created for everyone who is an MCU or comics fan, as me. It gives you some brief information about why I like it so much and some information about the characters in the movies. And as last a simple but enjoyable game to see which character matches with your answers on a few questions.
 
-## DESIGN
+## UX
+This site is for general users who want to have a bit of fun and play a simple game in the form of a questionnaire.
 
 ### FRAMEWORK
-
 I used Bootstrap for the navbar, the modals and the cards. I used the bootstrap cards to give a nice contrast with the darker barkground image.
 
 ### COLOR SCHEME
-
-The color scheme I chose is a grey palette.
+The color scheme I chose is a red, with a white contrast.
 
 -   `#777777`   (light grey)
 -   `#F0131E`   (Marvel red)
@@ -18,20 +17,12 @@ The color scheme I chose is a grey palette.
 -   `#2B2B2B`   (darkest grey, shadows)
 
 As the main font I chose for the [Avengero Font](https://fontmeme.com/fonts/avengero-font/) designed by Gene Buban.
-For the secondary font I used Comic Sans Ms, not ofter used but for the subject of this website very justifiable, and gives a playful character.
-
+For the secondary font I used Comic Sans Ms, not ofter used but for the subject of this website very justifiable, and gives a playful character. I've put 
 
 ### WIREFRAMES
-
-I used MS Excel to create my wireframes and put them in a separate folder [Wireframes](https://github.com/VolkovBos/milestone2_are_you_a_hero/tree/master/wireframes).
-
-
-## UX
-
-This site is for general users who want to have a bit of fun and play a simple game in the form of a questionnaire.
+I used MS Excel to create my wireframes and put them in a separate folder [Wireframes](https://github.com/VolkovBos/milestone2_are_you_a_hero/tree/master/wireframes). I've also put images of screenshots in the folder.
 
 ### USER STORIES
-
 -   As a general user, I want to navigate through the site in an orderly fashion, so I can see which information is on the site.
 -   As a general user, I want to navigate through the site in an orderly fashion on a mobile view, so I can use the menu and the site on a mobile screen.
 -   As a general user, I want to find some information on the MCU character, so I can have some recreational time.
@@ -40,6 +31,8 @@ This site is for general users who want to have a bit of fun and play a simple g
 -   As a general user, I want to get in contact with the creator of the website.
 
 ## Features
+
+### Existing Features
 -   On all pages there is a clear and obvious menu for the three pages.
 -   A navigation menu, which changes to a hamburger menu on smaller screens.
 -   A navigation menu, which sticks on the top of the page. And a footer which sticks in the bottom of the screen.
@@ -50,7 +43,7 @@ This site is for general users who want to have a bit of fun and play a simple g
 -   Click sounds when answering questions, clicking buttons.
 
 
-## Features To do
+### Features Left to Implement
 -   I would like to have the music play accross the site, even if you change pages within the website.
 -   I want to put the languages in seperate JSON files.
 -   I want to let the German text checked on grammar and spelling.
@@ -58,7 +51,6 @@ This site is for general users who want to have a bit of fun and play a simple g
 
 
 ### Pages
-
 -   [index.html](https://volkovbos.github.io/milestone2_are_you_a_hero/index.html)
 
     -   There is an introduction why I/m a fan of the MCU and what you can find on this site.
@@ -149,26 +141,21 @@ Brief overview of the languages, frameworks, and other tools I've used on this p
 ## TESTING
 
 ### TEST MATRIX
-
 I used a testing matrix in Excel to test the script across several browsers and devices.
 
-### COMBATIBILITY
-
 ### NOTED ISSUES
+- [x] The Avengero Fonts are not working in Safari as of the current commit. (resolved)
+- [x] The fonts are not working on mobile as of the current commit. (resolved)
+- [x] Comic sans font not working on mobile. (resolved)
+- [x] Hero modals on mobile not working correclty. (resolved)
+- [x] Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (resolved by changing the path to "assets/language/translation.json")
+- [x] Flags not always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG. (resolved)
+- [x] Modals of Thanos and Loki on result page not working. (resolved)
 
--   The Avengero Fonts are not working in Safari as of the current commit. (resolved)
--   The fonts are not working on mobile as of the current commit. (resolved)
--   Comic sans font not working on mobile. (resolved)
--   Hero modals on mobile not working correclty. (resolved)
--   Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (resolved by changing the path to "assets/language/translation.json")
--   Flags not always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG. (resolved)
--   Modals of Thanos and Loki on result page not working. (resolved)
-
--   On mobile the result page footer doesn't render correct.
--   The message of the email API isn't shown in the actual email.
+- [] On mobile the result page footer doesn't render correct.
+- [] The message of the email API isn't shown in the actual email.
 
 ## DEPLOYMENT
-
 This project was created using Github.
 From there I used Visual Studio Code to write my code.
 Then I used commits to git followed by pushes to my GitHub repository.
@@ -196,7 +183,6 @@ To run this project locally the following steps should be followed:
 For this project, local deployment was not required.
 
 ## CREDITS
-
 The idea for this page was written by myself.
 
 ### Content
@@ -204,7 +190,6 @@ The idea for this page was written by myself.
 The text for the heroes and villains modals I used from the [FANDOM](https://marvelcinematicuniverse.fandom.com/) and referenced it like stated in the [licensing statement](https://www.fandom.com/licensing/) under section USING FANDOM CONTENT.
 
 ### Media
-
 The background image I got from [Wallpaperaccess](https://wallpaperaccess.com/mcu).
 
 All the hero and villain images I got from [Marvel](https://www.marvel.com/), non-commercial usage.
@@ -214,7 +199,6 @@ The flags I used from [Country Flags](https://www.countryflags.com/).
 The mouseclick sound I used from [fesliyanstudios](https://www.fesliyanstudios.com), her is there non-commercial use [policy](https://www.fesliyanstudios.com/policy). I edited the mp3 to let the click directly start.
 
 ### Acknowledgements
-
 [w3schools](https://www.w3schools.com/) and [StackOverflow](https://stackoverflow.com/) for research.
 
 Thanks to [Tim Nelson](https://github.com/TravelTimN/ci-milestone01-ucfd) for the testing matrix.
