@@ -1,4 +1,7 @@
+/* Email API EmailJS */
 function sendMail(contactForm) {
+
+    /* variables from EmailJS account */
     var service_id = "gmail";
     var template_id = "marvel_fansite";
 

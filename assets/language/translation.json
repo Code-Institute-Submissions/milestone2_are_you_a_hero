@@ -1,6 +1,6 @@
 {
     "en": {
-        "flag": "<img class='flag' src='media/flags/eng.png'>",
+        "flag": "<img class='flag' src='assets/media/flags/eng.png'>",
         "title": "Are you a superhero?",
         "home": "Home",
         "play": "Play",
@@ -229,7 +229,7 @@
         "close": "Close"
     },
     "nl": {
-        "flag": "<img class='flag' src='media/flags/ned.png'>",
+        "flag": "<img class='flag' src='assets/media/flags/ned.png'>",
         "title": "Bent u een superheld?",
         "home": "Thuis",
         "play": "Spelen",
@@ -452,7 +452,7 @@
         "close": "Sluiten"
     },
     "de": {
-        "flag": "<img class='flag' src='media/flags/ger.png'>",
+        "flag": "<img class='flag' src='assets/media/flags/ger.png'>",
         "title": "Sind Sie ein Superheld?",
         "home": "Home",
         "play": "Spielen",

@@ -38,7 +38,7 @@ body {
 /* found the solution for my idea at Stackoverflow https://stackoverflow.com/questions/42312909/how-to-make-body-background-image-transparent-in-css */
 
 body::after {
-    background: url("../../media/images/460336.jpg") repeat center center;
+    background: url("../media/images/460336.jpg") repeat center center;
     background-size: 200px;
     content: "";
     opacity: 0.9;

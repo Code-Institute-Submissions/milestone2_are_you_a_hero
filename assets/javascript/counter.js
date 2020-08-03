@@ -18,11 +18,11 @@ $(document).ready(function() {
 
     // Function to hide the answered questions and show the following question
     $(".questions").find(".btn").click(function() {
-        var audio = new Audio("media/sounds/MouseClick.mp3");
+        var audio = new Audio("assets/media/sounds/MouseClick.mp3");
         /* https://www.w3schools.com/tags/av_prop_volume.asp */
         audio.volume = 0.4;
         audio.play();
-        
+
         $(this).parent().parent().css("display", "none");
         $(this).parent().parent().next().css("display", "block");
     });
@@ -99,22 +99,22 @@ $(document).ready(function() {
 
         switch (sessionStorage.getItem(1)) {
             case ".captain_america":
-                var audio = new Audio('media/sounds/cap.mp3');
+                var audio = new Audio('assets/media/sounds/cap.mp3');
                 audio.play();
                 break;
 
             case ".iron_man":
-                var audio = new Audio('media/sounds/stark.mp3');
+                var audio = new Audio('assets/media/sounds/stark.mp3');
                 audio.play();
                 break;
 
             case ".loki":
-                var audio = new Audio('media/sounds/loki.mp3');
+                var audio = new Audio('assets/media/sounds/loki.mp3');
                 audio.play();
                 break;
 
             case ".thanos":
-                var audio = new Audio('media/sounds/thanos.mp3');
+                var audio = new Audio('assets/media/sounds/thanos.mp3');
                 audio.play();
                 break;
         }
