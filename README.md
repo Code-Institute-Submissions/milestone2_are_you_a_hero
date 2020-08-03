@@ -38,6 +38,7 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 -   A navigation menu, which sticks on the top of the page. And a footer which sticks in the bottom of the screen.
 -   When you have the hamburger menu on smaller screens, you get a dropdown menu when clicking the hamburger icon.
 -   In the footer there is a email API functionality, by means of a bootstrap modal.
+-   In the background you hear the Avengers Theme song, when your browser settings allow this.
 -   In the footer you have the option to play the Avengers Theme song.
 -   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
 -   Click sounds when answering questions, clicking buttons.
