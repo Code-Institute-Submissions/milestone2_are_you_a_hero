@@ -1,27 +1,24 @@
 /* Got the idea and parts of the code from this question on StackOverflow
 https://stackoverflow.com/questions/32008125/using-javascript-to-change-website-language */
 
-var langs = ["en", "nl", "de"];
-var modal = ["name", "email", "message"];
-
 // Check if there is already a language selected
-if (sessionStorage.getItem("language") === 0 || sessionStorage.getItem("language") === null) {
-    var current_lang_index = 0;
-} else {
-    var current_lang_index = sessionStorage.getItem("language");
+if (sessionStorage.getItem("language") === "undefined" || sessionStorage.getItem("language") === null) {
+    sessionStorage.setItem("language", "en");
 };
 
-var current_lang = langs[current_lang_index];
+var current_lang = sessionStorage.getItem("language");
 
-document.change_lang = function() {
-    current_lang_index = ++current_lang_index % 3;
-    current_lang = langs[current_lang_index];
+function language(languageSelected) {
+    current_lang = languageSelected;
+
+    // Remember the language choice throughout the site
+    sessionStorage.setItem("language", languageSelected);
+
     translate();
 };
 
 function translate() {
     $("[data-translate]").each(function() {
-
         var key = $(this).data("translate");
         var trans;
 
@@ -40,9 +37,8 @@ function translate() {
                 $(this).html("");
             }
         });
-
-        // Remember the language choice throughout the site
-        sessionStorage.setItem("language", current_lang_index);
     });
 }
-translate();
+$(document).ready(function() {
+    translate();
+});

@@ -63,7 +63,7 @@ header .navbar {
     box-shadow: 0px 3px 3px #2b2b2b;
     border: 0;
     text-transform: uppercase;
-    font-size: larger;
+    font-size: medium;
     position: fixed !important;
     top: 0;
     width: auto;
@@ -78,7 +78,7 @@ header {
 
 .navbar-brand {
     color: #fff;
-    font-size: 180%;
+    font-size: 150%;
     letter-spacing: 0.45em;
 }
 
@@ -116,9 +116,44 @@ button:focus {
     border-bottom: none !important;
 }
 
+
+/*---------- Language section/flags in Menu ----------*/
+
 .flag {
-    height: 2em;
-    vertical-align: middle;
+    height: 1.5em;
+}
+
+.dropbtn {
+    margin: auto;
+    border: none;
+    background-color: #F0131E;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: .5rem 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F0131E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 

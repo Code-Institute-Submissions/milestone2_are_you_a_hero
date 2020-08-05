@@ -75,7 +75,15 @@
                         <a class="nav-link seperator" href="#">/</a>
                     </li>
                     <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a data-translate="flag" onclick="change_lang()"></a>
+                        <!-- https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+                        <div class="dropdown nav-link">
+                            <button class="dropbtn">Language</button>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="language('en')"><img class='flag' src='assets/media/flags/eng.png'></a>
+                                <a href="#" onclick="language('nl')"><img class='flag' src='assets/media/flags/ned.png'></a>
+                                <a href="#" onclick="language('de')"><img class='flag' src='assets/media/flags/ger.png'></a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
