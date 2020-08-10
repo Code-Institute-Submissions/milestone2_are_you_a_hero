@@ -9,13 +9,6 @@ var firstChoice = null;
 
 $(document).ready(function() {
 
-    // Used the reactions on the following link for the window.location.href: https://stackoverflow.com/questions/16959476/how-to-go-to-a-url-using-jquery
-    // can nog niet gelijk na vraag 1 vanaf een andere pagina, even kijken of ik dat wil
-    $(".start-btn").click(function() {
-        //sessionStorage.setItem(1, '.question1');
-        window.location.href = "play.html";
-    });
-
     // Function to hide the answered questions and show the following question
     $(".questions").find(".btn").click(function() {
         var audio = new Audio("assets/media/sounds/MouseClick.mp3");
@@ -24,10 +17,11 @@ $(document).ready(function() {
         audio.play();
 
         $(this).parent().parent().css("display", "none");
+        $(".explanation").css("display", "none");
         $(this).parent().parent().next().css("display", "block");
     });
 
-    // Function to add scores to each var
+    // Function to add scores to each variable
     // value 1 is counted double
     $('.btn').click(function() {
         count($(this).attr("data-value1"));
@@ -42,6 +36,7 @@ $(document).ready(function() {
     });
 });
 
+// Counts the data values set in the attributes of the buttons
 function count(a) {
     for (var i in outcomes) {
         if (a == outcomes[i].name) {
@@ -56,6 +51,7 @@ function count(a) {
     }
 }
 
+// For loop to find the outcome with the highest score
 function winner() {
     for (var i in outcomes) {
         if (outcomes[i].score > highest) {
@@ -65,6 +61,13 @@ function winner() {
     }
 }
 
+// Shows the winner result, class is set in switchToWinner
+$(document).ready(function() {
+    $(sessionStorage.getItem(1)).css("display", "contents");
+});
+
+
+// Sets winner class in sessionStorage
 function switchToWinner() {
     switch (firstChoice) {
         case "captainAmerika":
@@ -86,10 +89,7 @@ function switchToWinner() {
     window.location.href = "result.html";
 }
 
-$(document).ready(function() {
-    $(sessionStorage.getItem(1)).css("display", "contents");
-});
-
+// Plays sound for result winner on result page
 $(document).ready(function() {
     var path = window.location.pathname;
     var page = path.split("/").pop();
@@ -119,4 +119,31 @@ $(document).ready(function() {
                 break;
         }
     }
+});
+
+// Play again button
+$(document).ready(function() {
+    $(".play-again-btn").click(function() {
+        sessionStorage.setItem(2, "play_again");
+        window.location.href = "play.html";
+    });
+});
+
+// Play again, directly go to first question
+$(document).ready(function() {
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+
+    if (page === "play.html" && sessionStorage.getItem(2) === "play_again") {
+        $(".explanation").css("display", "none");
+        $(".question_start").css("display", "none");
+        $(".question1").css("display", "block");
+    }
+});
+
+/*  https://www.w3schools.com/jquery/sel_attribute_end_value.asp 
+    https://developer.mozilla.org/nl/docs/Web/API/Window/sessionStorage 
+    This clears the sessionStorage when play is used in the menu. */
+$("a[href$='play.html']").click(function() {
+    sessionStorage.removeItem(2);
 });

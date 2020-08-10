@@ -264,13 +264,15 @@ h3 {
 
 /*---------- Play/result page ----------*/
 
-.questions {
+.questions,
+.explanation {
     text-align: center;
 }
 
 #card-question {
     margin: auto;
     width: 100%;
+    margin-top: 50px;
 }
 
 h3 {
@@ -288,7 +290,8 @@ button {
     text-transform: lowercase;
 }
 
-.question {
+.question_start,
+.explanation {
     display: block;
 }
 
@@ -307,6 +310,10 @@ button {
 .captain_america,
 .iron_man {
     display: none;
+}
+
+.play-again-btn {
+    width: 100%;
 }
 
 
