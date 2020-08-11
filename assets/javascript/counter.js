@@ -2,14 +2,14 @@ var characters = [{
     class: ".ironMan",
     score: 0,
     name: "Iron Man",
-    text: "You want to do the right thing, but not at all cost and only if you get some glory...",
+    text: "ironman",
     sound: "assets/media/sounds/stark.mp3",
     type: "hero"
 }, {
     class: ".captainAmerica",
     score: 0,
     name: "Captain America",
-    text: "You only want to do the right thing... Whatever it costs...",
+    text: "captainAmerica",
     sound: "assets/media/sounds/cap.mp3",
     type: "hero"
 }, {
@@ -58,14 +58,14 @@ var characters = [{
     class: ".thanos",
     score: 0,
     name: "Thanos",
-    text: "You only want to bring balance to the universe...",
+    text: "thanos",
     sound: "assets/media/sounds/thanos.mp3",
     type: "villain"
 }, {
     class: ".loki",
     score: 0,
     name: "Loki",
-    text: "Whatever you say or do, you cannot be trusted...",
+    text: "loki",
     sound: "assets/media/sounds/loki.mp3",
     type: "villain"
 }, {
@@ -244,7 +244,7 @@ function playWinnerAudio(winner) {
 function appendResultText(winner, second) {
     $(".first_class").append(winner.name);
     $(".second_class").append(second.name);
-    $(".text_class").append(winner.text);
+    $(".text_class").attr("data-translate", winner.text);
 };
 
 /* ----- Play again section ----- */
