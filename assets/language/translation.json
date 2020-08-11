@@ -65,6 +65,10 @@
         "answer21": "Yes",
         "answer22": "No",
 
+        "yourresult": "Your result",
+        "although": "Although you have some characteristics of ",
+        "again": "Play again",
+
         "strengthsHeader": "Strengths",
         "weaknessHeader": "Weakness",
 
@@ -291,6 +295,10 @@
         "answer21": "Ja",
         "answer22": "Geen",
 
+        "yourresult": "Jouw resultaat",
+        "although": "Ook al heb je wat eigenschappen van ",
+        "again": "Begin overnieuw",
+
         "strengthsHeader": "Sterke punten",
         "weaknessHeader": "Zwaktes",
 
@@ -516,6 +524,10 @@
         "question6": "Frage 6 <br><br> die Halfte von dem Universum geloscht werden sollte aus der Existenz",
         "answer21": "Ja",
         "answer22": "Keine",
+
+        "yourresult": "Dein Ergebnis",
+        "although": "Obwohl Sie einige Eigenschaften von haben ",
+        "again": "nochmal spielen",
 
         "strengthsHeader": "Starken",
         "weaknessHeader": "Schwache",
