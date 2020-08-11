@@ -248,6 +248,10 @@ h3 {
     z-index: 2;
 }
 
+.titleright {
+    text-align: right;
+}
+
 #frontpageimage1,
 #frontpageimage2 {
     width: 20em;
@@ -305,15 +309,47 @@ button {
     display: none;
 }
 
+.ironMan,
+.captainAmerica,
+.thor,
+.captainMarvel,
+.blackPanther,
+.spiderman,
+.scarlettWitch,
+.drStrange,
 .thanos,
 .loki,
-.captain_america,
-.iron_man {
+.killmonger,
+.corvusGlaive,
+.ego,
+.dormammu,
+.nebula,
+.ebonyMaw,
+.ironMan2,
+.captainAmerica2,
+.thor2,
+.captainMarvel2,
+.blackPanther2,
+.spiderman2,
+.scarlettWitch2,
+.drStrange2,
+.thanos2,
+.loki2,
+.killmonger2,
+.corvusGlaive2,
+.ego2,
+.dormammu2,
+.nebula2,
+.ebonyMaw2 {
     display: none;
 }
 
 .play-again-btn {
     width: 100%;
+}
+
+#result {
+    display: contents;
 }
 
 
