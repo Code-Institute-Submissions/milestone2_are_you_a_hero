@@ -305,42 +305,10 @@ button {
 .question4,
 .question5,
 .question6,
-.question7 {
-    display: none;
-}
-
-.ironMan,
-.captainAmerica,
-.thor,
-.captainMarvel,
-.blackPanther,
-.spiderman,
-.scarlettWitch,
-.drStrange,
-.thanos,
-.loki,
-.killmonger,
-.corvusGlaive,
-.ego,
-.dormammu,
-.nebula,
-.ebonyMaw,
-.ironMan2,
-.captainAmerica2,
-.thor2,
-.captainMarvel2,
-.blackPanther2,
-.spiderman2,
-.scarlettWitch2,
-.drStrange2,
-.thanos2,
-.loki2,
-.killmonger2,
-.corvusGlaive2,
-.ego2,
-.dormammu2,
-.nebula2,
-.ebonyMaw2 {
+.question7,
+.question8,
+.question9,
+.question10 {
     display: none;
 }
 

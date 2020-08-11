@@ -93,7 +93,7 @@ var characters = [{
     class: ".dormammu",
     score: 0,
     name: "Dormammu",
-    sound: "dormammu",
+    text: "dormammu",
     score: 0,
     type: "villain"
 }, {
@@ -144,7 +144,7 @@ $(document).ready(function() {
     });
 
     // Function to compare the scores and open window
-    $(".question6").find(".btn").click(function() {
+    $(".question10").find(".btn").click(function() {
         setTimeout(determineWinner(), 100);
         setTimeout(storeResultsAndSwitchPage(), 100);
     });
