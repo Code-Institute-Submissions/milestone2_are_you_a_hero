@@ -40,21 +40,24 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 -   In the footer there is a email API functionality, by means of a bootstrap modal.
 -   In the background you hear the Avengers Theme song, when your browser settings allow this.
 -   In the footer you have the option to play the Avengers Theme song.
--   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the flag in the menu.
+-   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the language item in the menu.
 -   Click sounds when answering questions, clicking buttons.
+-   A quiz with questions where the outcomes are one of the characters on the heroes or villains page.
 
 
 ### Features Left to Implement
--   I would like to have the music play accross the site, even if you change pages within the website.
+-   I would like to have the music play accross the site, even if you change pages within the website. (AJAX necessary)
 -   I want to put the languages in seperate JSON files.
 -   I want to let the German text checked on grammar and spelling.
 -   Replace JSON file translation with a Google translation API.
+-   More interaction in the quiz, not ony questions.
+-   Validation on the email modal.
 
 
 ### Pages
 -   [index.html](https://volkovbos.github.io/milestone2_are_you_a_hero/index.html)
 
-    -   There is an introduction why I/m a fan of the MCU and what you can find on this site.
+    -   There is an introduction why I'm a fan of the MCU and what you can find on this site.
 
 -   [play.html](https://volkovbos.github.io/milestone2_are_you_a_hero/play.html)
 
@@ -64,6 +67,7 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 
     -   The result page of the game, with the character who fits the most with the given answers.
     -   A brief sound is played of the character shown.
+    -   Play again button, which skips the start section of the play page.
 
 -   [heroes.html](https://volkovbos.github.io/milestone2_are_you_a_hero/heroes.html)
 
@@ -152,9 +156,11 @@ I used a testing matrix in Excel to test the script across several browsers and 
 - [x] Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (resolved by changing the path to "assets/language/translation.json")
 - [x] Flags not always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG. (resolved)
 - [x] Modals of Thanos and Loki on result page not working. (resolved)
+- [x] On mobile the result page footer doesn't render correct. (resolved)
+- [x] The message of the email API isn't shown in the actual email. (resolved)
 
-- [ ] On mobile the result page footer doesn't render correct.
-- [ ] The message of the email API isn't shown in the actual email.
+- [] The required modal fields are not always shown as required.
+
 
 ## DEPLOYMENT
 This project was created using Github.
