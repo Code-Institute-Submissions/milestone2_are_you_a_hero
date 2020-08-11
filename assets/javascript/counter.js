@@ -9,49 +9,49 @@ var characters = [{
     class: ".captainAmerica",
     score: 0,
     name: "Captain America",
-    text: "captainAmerica",
+    text: "captainamerica",
     sound: "assets/media/sounds/cap.mp3",
     type: "hero"
 }, {
     class: ".thor",
     score: 0,
     name: "Thor",
-    text: "",
+    text: "thor",
     sound: "",
     type: "hero"
 }, {
     class: ".captainMarvel",
     score: 0,
     name: "Captain Marvel",
-    text: "",
+    text: "captainmarvel",
     sound: "",
     type: "hero"
 }, {
     class: ".blackPanther",
     score: 0,
     name: "Black Panther",
-    text: "",
+    text: "blackpanther",
     sound: "",
     type: "hero"
 }, {
     class: ".spiderman",
     score: 0,
     name: "Spiderman",
-    text: "",
+    text: "spiderman",
     sound: "",
     type: "hero"
 }, {
     class: ".scarlettWitch",
     score: 0,
     name: "Scarlett Witch",
-    text: "",
+    text: "scarlettwitch",
     sound: "",
     type: "hero"
 }, {
     class: ".drStrange",
     score: 0,
     name: "Dr Strange",
-    text: "",
+    text: "drstrange",
     sound: "",
     type: "hero"
 }, {
@@ -72,42 +72,42 @@ var characters = [{
     class: ".killmonger",
     score: 0,
     name: "Killmonger",
-    text: "",
+    text: "killmonger",
     sound: "",
     type: "villain"
 }, {
     class: ".corvusGlaive",
     score: 0,
     name: "Corvus Glaive",
-    text: "",
+    text: "corvusglaive",
     sound: "",
     type: "villain"
 }, {
     class: ".ego",
     score: 0,
     name: "Ego",
-    text: "",
+    text: "ego",
     sound: "",
     type: "villain"
 }, {
     class: ".dormammu",
     score: 0,
     name: "Dormammu",
-    sound: "",
+    sound: "dormammu",
     score: 0,
     type: "villain"
 }, {
     class: ".nebula",
     score: 0,
     name: "Nebula",
-    text: "",
+    text: "nebula",
     sound: "",
     type: "villain"
 }, {
     class: ".ebonyMaw",
     score: 0,
     name: "Ebony Maw",
-    text: "",
+    text: "ebonymaw",
     sound: "",
     type: "villain"
 }];
