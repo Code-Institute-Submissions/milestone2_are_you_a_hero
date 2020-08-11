@@ -194,7 +194,7 @@ footer:hover .emphasize {
 /* keeps sticky footer in bottom */
 
 #play-footer {
-    margin-top: 600px;
+    position: absolute;
 }
 
 #result-footer {
@@ -452,6 +452,9 @@ th {
         line-height: 3rem;
         font-size: 0.5rem;
     }
+    #result-footer {
+        position: absolute;
+    }
     footer i {
         font-size: 1rem;
     }
@@ -511,10 +514,29 @@ th {
 }
 
 @media screen and (max-width: 420px) {
+    p {
+        margin-top: 0;
+    }
+    .btn {
+        margin: 5px;
+    }
     /*---------- Menu ----------*/
     .navbar-brand {
         font-size: 100%;
         letter-spacing: 0.3em;
+    }
+    header {
+        margin-bottom: 70px;
+    }
+    /*---------- Footer ----------*/
+    #play-footer,
+    #result-footer {
+        position: sticky;
+        margin-top: 240px;
+    }
+    /*---------- Play/result page ----------*/
+    #card-question {
+        margin-top: 5px;
     }
     /*----- Heroes/villains Modal ----*/
     .modal-hero {
