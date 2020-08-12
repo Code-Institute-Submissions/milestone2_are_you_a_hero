@@ -488,6 +488,12 @@ th {
         font-size: 120%;
         letter-spacing: 0.5em;
     }
+    /*---------- Footer ----------*/
+    #play-footer,
+    #result-footer {
+        position: sticky;
+        margin-top: 240px;
+    }
     /*---------- Index page ----------*/
     .card-index img {
         position: absolute;
@@ -527,12 +533,6 @@ th {
     }
     header {
         margin-bottom: 70px;
-    }
-    /*---------- Footer ----------*/
-    #play-footer,
-    #result-footer {
-        position: sticky;
-        margin-top: 240px;
     }
     /*---------- Play/result page ----------*/
     #card-question {
