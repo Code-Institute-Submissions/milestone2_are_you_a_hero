@@ -17,42 +17,42 @@ var characters = [{
     score: 0,
     name: "Thor",
     text: "thor",
-    sound: "",
+    sound: "assets/media/sounds/thor.mp3",
     type: "hero"
 }, {
     class: ".captainMarvel",
     score: 0,
     name: "Captain Marvel",
     text: "captainmarvel",
-    sound: "",
+    sound: "assets/media/sounds/marvel.mp3",
     type: "hero"
 }, {
     class: ".blackPanther",
     score: 0,
     name: "Black Panther",
     text: "blackpanther",
-    sound: "",
+    sound: "assets/media/sounds/panther.mp3",
     type: "hero"
 }, {
     class: ".spiderman",
     score: 0,
     name: "Spiderman",
     text: "spiderman",
-    sound: "",
+    sound: "assets/media/sounds/spiderman.mp3",
     type: "hero"
 }, {
     class: ".scarlettWitch",
     score: 0,
     name: "Scarlett Witch",
     text: "scarlettwitch",
-    sound: "",
+    sound: "assets/media/sounds/witch.mp3",
     type: "hero"
 }, {
     class: ".drStrange",
     score: 0,
     name: "Dr Strange",
     text: "drstrange",
-    sound: "",
+    sound: "assets/media/sounds/strange.mp3",
     type: "hero"
 }, {
     class: ".thanos",
@@ -73,42 +73,42 @@ var characters = [{
     score: 0,
     name: "Killmonger",
     text: "killmonger",
-    sound: "",
+    sound: "assets/media/sounds/killmonger.mp3",
     type: "villain"
 }, {
     class: ".corvusGlaive",
     score: 0,
     name: "Corvus Glaive",
     text: "corvusglaive",
-    sound: "",
+    sound: "assets/media/sounds/glaive.mp3",
     type: "villain"
 }, {
     class: ".ego",
     score: 0,
     name: "Ego",
     text: "ego",
-    sound: "",
+    sound: "assets/media/sounds/ego.mp3",
     type: "villain"
 }, {
     class: ".dormammu",
     score: 0,
     name: "Dormammu",
     text: "dormammu",
-    score: 0,
+    sound: "assets/media/sounds/dormammu.mp3",
     type: "villain"
 }, {
     class: ".nebula",
     score: 0,
     name: "Nebula",
     text: "nebula",
-    sound: "",
+    sound: "assets/media/sounds/nebula.mp3",
     type: "villain"
 }, {
     class: ".ebonyMaw",
     score: 0,
     name: "Ebony Maw",
     text: "ebonymaw",
-    sound: "",
+    sound: "assets/media/sounds/maw.mp3",
     type: "villain"
 }];
 var highest = 0;
