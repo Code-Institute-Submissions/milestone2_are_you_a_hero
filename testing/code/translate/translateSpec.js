@@ -1,65 +1,83 @@
 describe("Translate", function() {
-    /* When performing the test in Jasmine, the clicks are in logical order so:
-        - clear the cache of the browser 
-        - run all tests
-        - run tests not in random order
-    */
+    describe("Starting language tests", function() {
+        beforeEach(function() {
+            clearSessionStorage();
+            translate();
+        });
 
-    sessionStorage.clear();
-
-    describe("tests", function() {
-
-        it("Should return a zero as starting language", function() {
-            /* https://stackoverflow.com/questions/13530365/jasmine-expect-logic-expect-a-or-b */
-            expect(sessionStorage.getItem("language") == null || sessionStorage.getItem("language") == 0).toBe(true);
-            expect(current_lang_index == 0 || current_lang_index == "0").toBe(true);
+        it("Should return 'en' as starting language", function() {
+            expect(sessionStorage.getItem("language")).toBe("en");
             expect(current_lang).toBe("en");
         });
+        it("Should not return 'nl' as starting language", function() {
+            expect(sessionStorage.getItem("language")).not.toBe("nl");
+            expect(current_lang).not.toBe("nl");
+        });
+        it("Should not return 'de' as starting language", function() {
+            expect(sessionStorage.getItem("language")).not.toBe("de");
+            expect(current_lang).not.toBe("de");
+        });
+        it("Should not return '' as starting language", function() {
+            expect(sessionStorage.getItem("language")).not.toBe("");
+            expect(current_lang).not.toBe("");
+        });
+    });
 
-        it("Should return a 1 as the language", function() {
-            $("a").click();
-            expect(sessionStorage.getItem("language")).toBe("1");
-        });
-        it("Should return a 1 as the language index", function() {
-            expect(current_lang_index).toBe(1);
-        });
-        it("Should return a 'nl' as the language", function() {
-            expect(current_lang).toBe("nl");
-        });
-        it("Should return 'Schurken (nl)'", function() {
-            const boldText = $("[data-translate=villains]");
-            expect(boldText[0].textContent).toBe("Schurken (nl)");
-        });
-
-
-        it("Should return a 2 as the language", function() {
-            $("a").click();
-            expect(sessionStorage.getItem("language")).toBe("2");
-        });
-        it("Should return a 2 as the language index", function() {
-            expect(current_lang_index).toBe(2);
-        });
-        it("Should return a 'de' as the language", function() {
-            expect(current_lang).toBe("de");
-        });
-        it("Should return 'Schurken (de)'", function() {
-            const boldText = $("[data-translate=villains]");
-            expect(boldText[0].textContent).toBe("Schurken (de)");
+    describe("Translate English text tests", function() {
+        beforeEach(function() {
+            clearSessionStorage();
+            language('en');
         });
 
-        it("Should return a 0 as the language", function() {
-            $("a").click();
-            expect(sessionStorage.getItem("language")).toBe("0");
-        });
-        it("Should return a 0 as the language index", function() {
-            expect(current_lang_index).toBe(0);
-        });
-        it("Should return a 'en' as the language", function() {
-            expect(current_lang).toBe("en");
-        });
         it("Should return 'Villains'", function() {
             const boldText = $("[data-translate=villains]");
             expect(boldText[0].textContent).toBe("Villains");
         });
+        it("Should return 'Villains' not 'Schurken'", function() {
+            const boldText = $("[data-translate=villains]");
+            expect(boldText[0].textContent).not.toBe("Schurken");
+        });
+        it("Should return 'Villains' not 'Hello World!'", function() {
+            const boldText = $("[data-translate=villains]");
+            expect(boldText[0].textContent).not.toBe("Hello World!");
+        });
+        it("Should return 'Villains' not null", function() {
+            const boldText = $("[data-translate=villains]");
+            expect(boldText[0].textContent).not.toBe("");
+        });
+        it("Should return 'name' not null", function() {
+            const boldText = $("#name").text()
+            expect(boldText).toBe("Name");
+        });
     });
+
+    describe("Translate modal text tests", function() {
+        beforeEach(function() {
+            clearSessionStorage();
+            language('en');
+        });
+
+        it("Should return 'Name' not null", function() {
+            const boldText = $("#name").text()
+            expect(boldText).toBe("Name");
+        });
+        it("Should return 'Email' not null", function() {
+            const boldText = $("#email").text()
+            expect(boldText).toBe("Email");
+        });
+        it("Should return '' not 'Message'", function() {
+            const boldText = $("#message").text()
+            expect(boldText).toBe("");
+        });
+    });
+
+
+
+    /* Clears session storage at end of test */
+    function clearSessionStorage() {
+        var n = sessionStorage.length;
+        while (n--) {
+            sessionStorage.removeItem(sessionStorage.key(n));
+        }
+    };
 });
