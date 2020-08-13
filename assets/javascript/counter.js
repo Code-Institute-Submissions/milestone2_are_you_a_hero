@@ -113,8 +113,6 @@ var characters = [{
 }];
 var highest = 0,
     second = 0;
-var firstChoice = null,
-    secondChoice = null;
 var path = window.location.pathname;
 var page = path.split("/").pop();
 var audioUrl;
