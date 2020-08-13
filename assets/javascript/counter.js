@@ -111,9 +111,10 @@ var characters = [{
     sound: "assets/media/sounds/maw.mp3",
     type: "villain"
 }];
-var highest = 0;
-var second = 0;
-var firstChoice, secondChoice = null;
+var highest = 0,
+    second = 0;
+var firstChoice = null,
+    secondChoice = null;
 var path = window.location.pathname;
 var page = path.split("/").pop();
 var audioUrl;
@@ -146,7 +147,10 @@ $(document).ready(function() {
     // Function to compare the scores and open window
     $(".question10").find(".btn").click(function() {
         setTimeout(determineWinner(), 100);
-        setTimeout(storeResultsAndSwitchPage(), 100);
+        setTimeout(
+            window.location.href = "result.html",
+            100
+        );
     });
 });
 
@@ -179,7 +183,6 @@ function determineWinner() {
 
             // Define the highest score
             highest = characters[i].score;
-            firstChoice = characters[i].class;
             window.sessionStorage.winner = JSON.stringify(characters[i]);
 
             // Define the first second score
@@ -187,12 +190,6 @@ function determineWinner() {
             window.sessionStorage.second = JSON.stringify(characters[i]);
         }
     }
-};
-
-// Sets winner class in sessionStorage and separates heroes and winners (for div hunting)
-function storeResultsAndSwitchPage() {
-    sessionStorage.setItem(1, firstChoice);
-    window.location.href = "result.html";
 };
 
 /* ----- Result section ----- */
