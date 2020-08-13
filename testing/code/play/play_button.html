@@ -1,0 +1,174 @@
+<html>
+
+<head>
+    <title>Jasmine Testing</title>
+
+    <!-- Load Jasmine Framwork -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.js" integrity="sha256-PePX8Jc4TIxzzVz0Qe4NsH3OUU8+Y49DBWvYgggNqkY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine-html.js" integrity="sha256-qazAASTTgUrq9SOYkPSB3oEuqbhn+2j4kxGkVZ0GKjY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.js" integrity="sha256-HG8TKl0T65NyELmbUoo0H7/a1e++smYdXXtuuEsyKok=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.css" integrity="sha256-YzqdEMEXu1sH1t2Y9tk3XhKhxy1xMWvcA1koZx43k+8=" crossorigin="anonymous" />
+
+    <!-- Load Scripts -->
+    <!-- Scripts -->
+    <script src="assets/javascript/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap script for header menu collapse -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+
+</head>
+
+<body>
+    <div class="card" id="card-question" style="display: none;">
+        <div class="row">
+            <!-- Starting card question -->
+            <div class="question_start col-12">
+                <div class="question_start col-12">
+                    <h3 data-translate="question"></h3>
+                </div>
+                <!--https://getbootstrap.com/docs/4.0/components/buttons/-->
+                <div class="answer-btns col-12">
+                    <button data-translate="answer" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1="startquiz"></button>
+                </div>
+            </div>
+
+            <!-- Questionnaire-->
+            <div class="question1 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question1"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer1" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".scarlettWitch" data-value2=".spiderman"></button>
+                    <button data-translate="answer2" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".loki" data-value2=".drStrange"></button>
+                    <button data-translate="answer3" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ironMan" data-value2=".thor"></button>
+                    <button data-translate="answer4" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainAmerica" data-value2=".blackPanther"></button>
+                    <button data-translate="answer23" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".dormammu" data-value2=".corvusGlaive"></button>
+                    <button data-translate="answer24" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ebonyMaw" data-value2=".captainMarvel"></button>
+                </div>
+            </div>
+            <div class="question2 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question2"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer5" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainAmerica" data-value2=".blackPanther"></button>
+                    <button data-translate="answer6" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".nebula" data-value2=".captainmarvel"></button>
+                    <button data-translate="answer7" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".loki" data-value2=".ebonyMaw"></button>
+                    <button data-translate="answer8" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ironMan" data-value2=".drStrange"></button>
+                    <button data-translate="answer25" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".dormammu" data-value2=".ego"></button>
+                </div>
+            </div>
+            <div class="question3 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question3"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer9" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainAmerica" data-value2=".blackPanther"></button>
+                    <button data-translate="answer10" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ironMan" data-value2=".scarlettWitch"></button>
+                    <button data-translate="answer11" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".loki" data-value2=".ebonyMaw"></button>
+                    <button data-translate="answer12" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".dormammu" data-value2=".killmonger"></button>
+                    <button data-translate="answer46" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".corvusglaive" data-value2=".nebula"></button>
+                </div>
+            </div>
+            <div class="question4 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question4"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer13" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainAmerica" data-value2=".blackPanther"></button>
+                    <button data-translate="answer14" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ironMan" data-value2=".killmonger"></button>
+                    <button data-translate="answer15" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".loki" data-value2=".nebula"></button>
+                    <button data-translate="answer16" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".scarlettWitch" data-value2=".ebonyMaw"></button>
+                    <button data-translate="answer26" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".thor" data-value2=".ego"></button>
+                    <button data-translate="answer27" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".spiderman" data-value2=".captainMarvel"></button>
+                </div>
+            </div>
+            <div class="question5 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question5"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer17" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".loki" data-value2=".ego"></button>
+                    <button data-translate="answer18" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ironMan" data-value2=".blackPanther"></button>
+                    <button data-translate="answer19" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainAmerica" data-value2=".corvusGlaive"></button>
+                    <button data-translate="answer28" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainMarvel" data-value2=".captainMarvel"></button>
+                    <button data-translate="answer29" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".drStrange" data-value2=".spiderman"></button>
+                    <button data-translate="answer30" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".killmonger" data-value2=".thor"></button>
+                    <button data-translate="answer31" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".nebula" data-value2=".killmonger"></button>
+                </div>
+            </div>
+            <div class="question6 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question6"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer32" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainMarvel" data-value2=".thor"></button>
+                    <button data-translate="answer33" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".scarlettWitch" data-value2=".loki"></button>
+                    <button data-translate="answer34" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".blackPanther" data-value2=".corvusGlaive"></button>
+                    <button data-translate="answer35" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".spiderman" data-value2=".captainamerica"></button>
+                    <button data-translate="answer36" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".drStrange" data-value2=".ebonyMaw"></button>
+                    <button data-translate="answer37" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ego" data-value2=".dormammu"></button>
+                    <button data-translate="answer38" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".nebula" data-value2=".killmonger"></button>
+                </div>
+            </div>
+            <div class="question7 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question7"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer39" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainMarvel" data-value2=".nebula"></button>
+                    <button data-translate="answer40" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".scarlettWitch" data-value2=".thor"></button>
+                    <button data-translate="answer41" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".blackPanther" data-value2=".killmonger"></button>
+                    <button data-translate="answer42" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainamerica" data-value2=".ego"></button>
+                    <button data-translate="answer43" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".ironMan" data-value2=".dormammu"></button>
+                    <button data-translate="answer44" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".spiderman" data-value2=".spiderman"></button>
+                    <button data-translate="answer45" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".loki" data-value2=".killmonger"></button>
+                </div>
+            </div>
+            <div class="question8 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question8"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer47" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".thor" data-value2=".captainamerica"></button>
+                    <button data-translate="answer48" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainamerica" data-value2=".blackPanther"></button>
+                    <button data-translate="answer49" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".scarlettWitch" data-value2=".ebonyMaw"></button>
+                    <button data-translate="answer50" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".killmonger" data-value2=".nebula"></button>
+                    <button data-translate="answer51" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".corvusGlaive" data-value2=".loki"></button>
+                    <button data-translate="answer52" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".blackPanther" data-value2=".ironMan"></button>
+                    <button data-translate="answer53" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".dormammu" data-value2=".ego"></button>
+                </div>
+            </div>
+            <div class="question9 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question9"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer54" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".dormammu" data-value2=".corvusGlaive"></button>
+                    <button data-translate="answer55" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".killmonger" data-value2=".ebonyMaw"></button>
+                    <button data-translate="answer56" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".thor" data-value2=".ironMan"></button>
+                    <button data-translate="answer57" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".scarlettWitch" data-value2=".spiderman"></button>
+                </div>
+            </div>
+            <div class="question10 col-12">
+                <div class="question col-12">
+                    <h3 data-translate="question10"></h3>
+                </div>
+                <div class="answer-btns col-12">
+                    <button data-translate="answer21" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".thanos" data-value2=".thanos"></button>
+                    <button data-translate="answer22" type="button" class="btn btn-secondary col-12 col-lg-5" data-value1=".captainAmerica" data-value2=".ironMan"></button>
+                </div>
+            </div>
+            <div id='winner'></div>
+        </div>
+    </div>
+</body>
+
+<!-- Counter for the playing and result section -->
+<script type="text/javascript" src="counter.js"></script>
+<script src="translate.js"></script>
+
+<!-- Load Tests -->
+<script type="text/javascript" src="counterSpecButton.js"></script>
+
+</html>
