@@ -8,7 +8,7 @@ describe("Counter", function() {
         };
     });
 
-    describe("Varibles", function() {
+    describe("Variables", function() {
         it("Varibles should return 0", function() {
             expect(highest).toBe(0);
             expect(second).toBe(0);
