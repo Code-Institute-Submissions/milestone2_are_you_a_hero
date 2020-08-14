@@ -1,11 +1,6 @@
 /* Got the idea and parts of the code from this question on StackOverflow
 https://stackoverflow.com/questions/32008125/using-javascript-to-change-website-language */
 
-// Check if there is already a language selected
-if (sessionStorage.getItem("language") === "undefined" || sessionStorage.getItem("language") === null) {
-    sessionStorage.setItem("language", "en");
-};
-
 var current_lang = sessionStorage.getItem("language");
 
 function language(languageSelected) {
@@ -15,12 +10,19 @@ function language(languageSelected) {
     sessionStorage.setItem("language", languageSelected);
 
     translate();
-};
+}
 
 function translate() {
     $("[data-translate]").each(function() {
         var key = $(this).data("translate");
-        var trans;
+
+        // Check if there is already a language selected
+        if (
+            sessionStorage.getItem("language") === "undefined" ||
+            sessionStorage.getItem("language") === null
+        ) {
+            sessionStorage.setItem("language", "en");
+        }
 
         // Translation from JSON file
         $.getJSON("assets/language/translation.json", (json) => {
