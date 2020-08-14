@@ -160,6 +160,7 @@ I used a testing matrix in Excel to test the script across several browsers and 
 - [x] On mobile the result page footer doesn't render correct. (resolved)
 - [x] The message of the email API isn't shown in the actual email. (resolved)
 - [x] The required modal fields are not always shown as required.
+- [x] Changed the translation so that I call the JSON file(s) just once and not seperate for each element. ($.getJSON("assets/language/translation.json")
 
 
 ## DEPLOYMENT

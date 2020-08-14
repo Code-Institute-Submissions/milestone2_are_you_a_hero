@@ -13,19 +13,21 @@ function language(languageSelected) {
 }
 
 function translate() {
-    $("[data-translate]").each(function() {
-        var key = $(this).data("translate");
+    // Translation from JSON file
+    $.getJSON("assets/language/translation.json", (json) => {
 
-        // Check if there is already a language selected
-        if (
-            sessionStorage.getItem("language") === "undefined" ||
-            sessionStorage.getItem("language") === null
-        ) {
-            sessionStorage.setItem("language", "en");
-        }
+        $("[data-translate]").each(function() {
+            var key = $(this).data("translate");
 
-        // Translation from JSON file
-        $.getJSON("assets/language/translation.json", (json) => {
+            // Check if there is already a language selected
+            if (
+                sessionStorage.getItem("language") === "undefined" ||
+                sessionStorage.getItem("language") === null
+            ) {
+                sessionStorage.setItem("language", "en");
+                current_lang = "en";
+            }
+
             const trans = json[current_lang][key];
             $(this).html(trans);
 
