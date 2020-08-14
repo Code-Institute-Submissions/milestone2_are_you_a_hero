@@ -222,7 +222,9 @@ $("a[href$='result.html']").ready(function() {
 
     // Needed to fill the modal info from the character card
     $(document).ready(function() {
-        translate();
+        if (!window.jasmine) {
+            translate();
+        }
     });
 });
 
