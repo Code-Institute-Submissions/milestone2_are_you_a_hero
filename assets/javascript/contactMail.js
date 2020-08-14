@@ -3,6 +3,8 @@ function sendMail(contactForm) {
     /* variables from EmailJS account */
     var service_id = "gmail";
     var template_id = "marvel_fansite";
+    var current_lang = sessionStorage.getItem("language");
+    var trans;
 
     try {
         emailjs.send(service_id, template_id, {
@@ -13,12 +15,21 @@ function sendMail(contactForm) {
         $("#myModal").modal("hide");
         $("#name, #email, #message").val("");
 
-        alert("Thank you for your message!");
+        $.getJSON("assets/language/translation.json", (json) => {
+            trans = json[current_lang]["alert"];
+            alert(trans);
+        });
+
         return true;
+
     } catch (error) {
         $("#myModal").modal("hide");
         $("#name, #email, #message").val("");
-        alert("Something went wrong. Please try again later.");
+
+        $.getJSON("assets/language/translation.json", (json) => {
+            trans = json[current_lang]["alerterror"];
+            alert(trans);
+        });
 
         return false;
     }
