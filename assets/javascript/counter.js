@@ -160,12 +160,13 @@ $(document).ready(function() {
     });
 
     // Function to compare the scores and open window
-    $(".question10")
-        .find(".btn")
-        .click(function() {
-            setTimeout(determineWinner(), 100);
+    $(".question10").find(".btn").click(function() {
+        setTimeout(determineWinner(), 100);
+
+        if (!window.jasmine) {
             setTimeout((window.location.href = "result.html"), 100);
-        });
+        }
+    });
 });
 
 // Counts the data values set in the attributes of the buttons
