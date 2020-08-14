@@ -6,6 +6,11 @@ describe("Counter", function() {
         for (const sco of scores) {
             sco.score = 0;
         };
+        sessionStorage.clear();
+    });
+
+    beforeEach(function() {
+        // sessionStorage.setItem("language", "en");
     });
 
     describe("Scores buttons", function() {
@@ -20,9 +25,8 @@ describe("Counter", function() {
             $("button[data-translate='answer49']").trigger('click'); // 2 points
             $("button[data-translate='answer57']").trigger('click'); // 2 points
             $("button[data-translate='answer22']").trigger('click'); // 0 points
-        });
 
-        determineWinner();
+        });
 
         var winner = JSON.parse(window.sessionStorage.winner);
         var second = JSON.parse(window.sessionStorage.second);
