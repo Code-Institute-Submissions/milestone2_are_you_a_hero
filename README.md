@@ -66,6 +66,7 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 -   [result.html](https://volkovbos.github.io/milestone2_are_you_a_hero/result.html)
 
     -   The result page of the game, with the character who fits the most with the given answers.
+    -   Also you will get the name of the second character, where you scored on.
     -   A brief sound is played of the character shown.
     -   Play again button, which skips the start section of the play page.
 
@@ -146,7 +147,7 @@ Brief overview of the languages, frameworks, and other tools I've used on this p
 ## TESTING
 
 ### TEST MATRIX
-I used a testing matrix in Excel to test the script across several browsers and devices.
+I used a testing matrix in Excel to test the script across several browsers and devices. I also added a file with question paths to come to all possible outcomes you can find the file here [Question paths](https://github.com/VolkovBos/milestone2_are_you_a_hero/tree/master/testing/Question paths.png). The empty fields are question where there are no answers with scores for that character, if you randomly select an answer for those questions this will have a small impact on the outcome.
 
 ### NOTED ISSUES
 - [x] The Avengero Fonts are not working in Safari as of the current commit. (resolved)
