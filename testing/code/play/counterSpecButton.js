@@ -18,9 +18,10 @@ describe("Counter", function() {
 
                 var winner = JSON.parse(window.sessionStorage.winner);
                 var second = JSON.parse(window.sessionStorage.second);
+
+                expect(winner.score).not.toBe(0);
+                done();
             });
-            expect(winner.score).not.toBe(0);
-            done();
         });
     });
 });
