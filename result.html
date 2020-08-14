@@ -22,8 +22,8 @@
     <script src="assets/javascript/jquery-3.5.1.min.js"></script>
 
     <!-- EmailJS API-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script>
         (function() {
             emailjs.init("user_VWTMl2a56d4w3kUKpKAyq");
         })();
@@ -78,9 +78,9 @@
                         <div class="dropdown nav-link">
                             <button class="dropbtn">Language</button>
                             <div class="dropdown-content">
-                                <a href="#" onclick="language('en')"><img class='flag' src='assets/media/flags/eng.png'></a>
-                                <a href="#" onclick="language('nl')"><img class='flag' src='assets/media/flags/ned.png'></a>
-                                <a href="#" onclick="language('de')"><img class='flag' src='assets/media/flags/ger.png'></a>
+                                <a href="#" onclick="language('en')"><img class='flag' src="assets/media/flags/eng.png" alt="English flag"></a>
+                                <a href="#" onclick="language('nl')"><img class='flag' src="assets/media/flags/ned.png" alt="Dutch flag"></a>
+                                <a href="#" onclick="language('de')"><img class='flag' src="assets/media/flags/ger.png" alt="German flag"></a>
                             </div>
                         </div>
                     </li>
@@ -108,7 +108,7 @@
 
     <footer id="result-footer">
         <a href="https://github.com/VolkovBos" target="_blank" class="emphasize">Robbert Bos</a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
-        <a href="#"></a><i class="fas fa-address-card" data-toggle="modal" data-target="#myModal" title="Contact me!"></i></a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fas fa-address-card" data-toggle="modal" data-target="#myModal" title="Contact me!"></i></a> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;
         <audio src="assets/media/sounds/The-Avengers-Theme-Song.mp3" id="audio"></audio>
         <i class="fas fa-volume-mute" id="play" onclick="play()" title="Avengers Theme Song !"></i>
     </footer>
@@ -131,13 +131,13 @@
     </div>
 
     <!-- Counter for the questions/answers and hiding/showing other questions -->
-    <script type="text/javascript" src="assets/javascript/counter.js"></script>
+    <script src="assets/javascript/counter.js"></script>
 
     <!-- Bootstrap script for header menu collapse -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- EmailJS API, sends email to owner of site -->
-    <script type="text/javascript" src="assets/javascript/contactMail.js"></script>
+    <script src="assets/javascript/contactMail.js"></script>
 
     <!-- Translation of the website -->
     <script src="assets/javascript/translate.js"></script>

@@ -273,7 +273,7 @@ h3 {
     text-align: center;
 }
 
-#card-question {
+.card-question {
     margin: auto;
     width: 100%;
     margin-top: 50px;
