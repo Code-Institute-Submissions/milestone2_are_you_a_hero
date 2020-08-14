@@ -191,14 +191,6 @@ footer:hover .emphasize {
 }
 
 
-/* keeps footer in bottom */
-
-#play-footer,
-#result-footer {
-    position: absolute;
-}
-
-
 /*---------- Footer Modal ----------*/
 
 .modal-contact {
@@ -448,9 +440,6 @@ th {
     footer {
         line-height: 3rem;
         font-size: 0.5rem;
-    }
-    #result-footer {
-        position: absolute;
     }
     footer i {
         font-size: 1rem;
