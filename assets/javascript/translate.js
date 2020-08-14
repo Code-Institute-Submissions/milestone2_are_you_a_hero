@@ -1,11 +1,7 @@
 /* Got the idea and parts of the code from this question on StackOverflow
 https://stackoverflow.com/questions/32008125/using-javascript-to-change-website-language */
 
-var current_lang = sessionStorage.getItem("language");
-
 function language(languageSelected) {
-    current_lang = languageSelected;
-
     // Remember the language choice throughout the site
     sessionStorage.setItem("language", languageSelected);
 
@@ -13,6 +9,8 @@ function language(languageSelected) {
 }
 
 function translate() {
+    var current_lang = sessionStorage.getItem("language");
+
     // Translation from JSON file
     $.getJSON("assets/language/translation.json", (json) => {
 
