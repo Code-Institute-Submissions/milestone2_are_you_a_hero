@@ -34,3 +34,13 @@ function sendMail(contactForm) {
         return false;
     }
 }
+
+$("#submit").click(function() {
+    var name = $("#name").val();
+
+    if (name.length < 5)
+        alert("Name is to short, please fill in your name");
+
+    if ($.trim($('#name').val()) == '')
+        alert('Name only contains whitespaces, please fill in your name');
+});
