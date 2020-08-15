@@ -43,15 +43,15 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 -   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the language item in the menu.
 -   Click sounds when answering questions, clicking buttons.
 -   A quiz with questions where the outcomes are one of the characters on the heroes or villains page.
+-   Validation on the email modal.
 
 
 ### Features Left to Implement
--   I would like to have the music play accross the site, even if you change pages within the website. (AJAX necessary)
+-   I would like to have the music play accross the site, even if you change pages within the website.
 -   I want to put the languages in seperate JSON files.
--   I want to let the German text checked on grammar and spelling.
+-   I want to let the content checked on grammar and spelling.
 -   Replace JSON file translation with a Google translation API.
 -   More interaction in the quiz, not ony questions.
--   Validation on the email modal.
 
 
 ### Pages
