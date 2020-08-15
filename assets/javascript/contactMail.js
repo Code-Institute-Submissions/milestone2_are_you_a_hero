@@ -33,14 +33,24 @@ function sendMail(contactForm) {
 
         return false;
     }
-}
+};
 
-$("#submit").click(function() {
+/* Validates name entry and shows popup */
+function validateData() {
     var name = $("#name").val();
 
-    if (name.length < 5)
-        alert("Name is to short, please fill in your name");
+    setTimeout(function() {
+        $("#submit").popover('dispose');
+    }, 3000);
 
-    if ($.trim($('#name').val()) == '')
-        alert('Name only contains whitespaces, please fill in your name');
-});
+    if (name.length < 5) {
+        $("#submit").popover({ title: 'Error', content: "Name is to short, please fill in your name" });
+        return false;
+
+    } else if ($.trim(name) == '') {
+        $("#submit").popover({ title: 'Error', content: "Name only contains whitespaces, please fill in your name" });
+
+        return false;
+    }
+    return true;
+};
