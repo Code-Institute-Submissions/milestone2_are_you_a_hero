@@ -15,6 +15,8 @@
         "name": "Name",
         "email": "Email",
         "message": "Message",
+        "alert": "Thank you for your message!",
+        "alerterror": "Something went wrong, please try again!",
 
         "title1": "Welcome to my site",
         "paragraph1": "For more then 10 years the Marvel Cinematic Universe(MCU) has been a big part of the cinematic landscape. With big budgets and audiences the films are no longer for nerds only. I made this website as a fan, wanted to tell you a little bit about my experiences with the MCU and made a fun game where you can see which MCU character matches your answers!",
@@ -310,6 +312,8 @@
         "name": "Naam",
         "email": "E-mail adres",
         "message": "Bericht",
+        "alert": "He joh, bedankt man!",
+        "alerterror": "Er ging iets fout, probeer het overnieuw!",
 
         "title1": "Welkom op mijn site",
         "paragraph1": "Al meer dan 10 jaar de Marvel Cinematic Universe(MCU) is een groot deel van het filmische landschap. Met grote budgetten en doelgroepen de films zijn niet meer voor nerds alleen. Deze website heb ik gemaakt als een fan, wilde jullie een beetje vertellen over mijn ervaringen met de MCU en maakte een leuk spel waar je kunt zien welke MCU karakter overeenkomt met uw antwoorden!",
@@ -605,6 +609,8 @@
         "name": "Name",
         "email": "E-mail",
         "message": "Botschaft",
+        "alert": "Danke für deine Nachricht!",
+        "alerterror": "Etwas ist schief gelaufen. Bitte versuche es erneut!",
 
         "title1": "Herzlich willkommen auf meiner seite",
         "paragraph1": "Seit mehr als 10 Jahren die Marvel Cinematic Universe(MCU) wurde ein groBer Teil der filmischen Landschaft. Mit groBen budgets und Zielgruppen der Filme sind nicht mehr nur fur nerds. Ich habe diese website als fan, wollte Ihnen sagen, ein wenig uber meine Erfahrungen mit der MCU und machten ein lustiges Spiel, wo Sie sehen konnen, welche MCU-Charakter passt zu deinen Antworten!",

@@ -1,10 +1,8 @@
 describe("Translate", function() {
-    beforeEach(function() {
-        clearSessionStorage();
-        language('nl');
-    });
-
     describe("Translate Dutch text tests", function() {
+        language('nl');
+        translate();
+
         it("Should return 'Schurken'", function() {
             const boldText = $("[data-translate=villains]");
             expect(boldText[0].textContent).toBe("Schurken");
@@ -21,14 +19,6 @@ describe("Translate", function() {
             const boldText = $("[data-translate=villains]");
             expect(boldText[0].textContent).not.toBe("");
         });
-    });
-
-    describe("Translate modal text tests", function() {
-        beforeEach(function() {
-            clearSessionStorage();
-            language('nl');
-        });
-
         it("Should return 'Naam' not null", function() {
             const boldText = $("#name").text()
             expect(boldText).toBe("Naam");
@@ -42,12 +32,4 @@ describe("Translate", function() {
             expect(boldText).toBe("");
         });
     });
-
-    /* Clears session storage at end of test */
-    function clearSessionStorage() {
-        var n = sessionStorage.length;
-        while (n--) {
-            sessionStorage.removeItem(sessionStorage.key(n));
-        }
-    };
 });
