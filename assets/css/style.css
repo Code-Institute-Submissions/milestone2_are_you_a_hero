@@ -168,7 +168,7 @@ footer {
     text-align: center;
     bottom: 0;
     width: 100%;
-    position: sticky;
+    position: fixed;
 }
 
 a {
@@ -227,6 +227,13 @@ footer:hover .emphasize {
     overflow: hidden;
 }
 
+
+/* Prevents content falling behing the footer */
+
+.lowestcard {
+    margin-bottom: 90px !important;
+}
+
 h3 {
     padding: 10px;
     line-height: 2em;
@@ -265,7 +272,7 @@ h3 {
 .card-question {
     margin: auto;
     width: 100%;
-    margin-top: 50px;
+    margin: 50px 0 100px 0;
 }
 
 h3 {
@@ -466,6 +473,10 @@ th {
     .card-index {
         width: 90%;
     }
+    /*---------- Play page ----------*/
+    .card-question {
+        margin: 0 0 60px 0;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -474,9 +485,8 @@ th {
         font-size: 120%;
         letter-spacing: 0.5em;
     }
-    /*---------- Footer ----------*/
-    #result-footer {
-        position: sticky;
+    header {
+        margin-bottom: 70px;
     }
     /*---------- Index page ----------*/
     .card-index img {
@@ -515,9 +525,6 @@ th {
         font-size: 100%;
         letter-spacing: 0.3em;
     }
-    header {
-        margin-bottom: 70px;
-    }
     /*---------- Play/result page ----------*/
     #card-question {
         margin-top: 5px;
@@ -526,51 +533,5 @@ th {
     .modal-hero {
         width: 100%;
         margin: auto;
-    }
-}
-
-
-/* landscape view, mobile devices */
-
-@media screen and (orientation:landscape) {
-    /* iPhone X */
-    @media screen and (device-aspect-ratio: 812/375) {
-        header {
-            margin-bottom: 30px;
-        }
-        #result-footer,
-        #play-footer {
-            position: sticky !important;
-        }
-    }
-    /* iPhone 6/7/8 plus */
-    @media screen and (device-aspect-ratio: 736/414) {
-        header {
-            margin-bottom: 30px;
-        }
-        #result-footer,
-        #play-footer {
-            position: sticky !important;
-        }
-    }
-    /* iPhone 6/7/8 */
-    @media screen and (device-aspect-ratio: 667/375) {
-        header {
-            margin-bottom: 30px;
-        }
-        #result-footer,
-        #play-footer {
-            position: sticky !important;
-        }
-    }
-    /* Galaxy S5 and MotoG4 */
-    @media screen and (device-aspect-ratio: 640/360) {
-        header {
-            margin-bottom: 30px;
-        }
-        #result-footer,
-        #play-footer {
-            position: sticky !important;
-        }
     }
 }
