@@ -220,11 +220,11 @@ I used a testing matrix in Excel to test the script across several browsers and 
 ### Automatic testing
 I've used online validators to check my code. The validators that I've used are:
 
-[HTML Validator](https://validator.w3.org)<br>
-[CSS Validator](https://jigsaw.w3.org/css-validator/)<br>
-[JS Hint](https://jshint.com/)<br>
-[Esprima](https://esprima.org/demo/validate.html)<br>
-[JSONLint](https://jsonlint.com/)<br>
+HTML: [HTML Validator](https://validator.w3.org)<br>
+CSS: [CSS Validator](https://jigsaw.w3.org/css-validator/)<br>
+JavaScript: [JS Hint](https://jshint.com/)<br>
+JavaScript: [Esprima](https://esprima.org/demo/validate.html)<br>
+JSON: [JSONLint](https://jsonlint.com/)<br>
 
 The HTML Validator let me know that I had empty elements, but that's a design choice for the translation. The CSS validator only validates against valid code. The vendor extensions are proprietary code. As such it will always be warned.
 
