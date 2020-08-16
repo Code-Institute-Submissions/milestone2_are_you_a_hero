@@ -49,7 +49,6 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 
 
 ### Features Left to Implement
--   
 -   I want to put the languages in seperate JSON files.
 -   I want to let the content checked on grammar and spelling.
 -   Replace JSON file translation with a Google translation API.

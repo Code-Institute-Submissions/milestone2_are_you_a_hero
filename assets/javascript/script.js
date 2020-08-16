@@ -34,7 +34,7 @@ $(document).ready(function() {
     }
 
     // When switching to another page the location of the audio is stored
-    $(".nav-link").click(function() {
+    $(".audio").click(function() {
         if (!audio.paused) {
             sessionStorage.setItem("audio", audio.currentTime);
             sessionStorage.setItem("audioOn", 1);
