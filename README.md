@@ -43,7 +43,7 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 -   The whole site is available in the languages English, Dutch and German. This can be changed by clicking on the language item in the menu.
 -   Click sounds when answering questions, clicking buttons.
 -   A quiz with questions where the outcomes are one of the characters on the heroes or villains page.
--   Validation on the email modal.
+-   Validations on the email modal.
 
 
 ### Features Left to Implement
@@ -171,10 +171,13 @@ I used a testing matrix in Excel to test the script across several browsers and 
                     - The fields have placeholder text so you know what you have to fill in
                     - When the form is send, the modal will disappear and a pop up with the text "Thank you for your message!" shows up
                     - When you re-open the modal the fields have been made empty
-                2. Fill in a name shorter then 5 character and click on submit to get a popover message that the name is too short
+                2. Fill in a name shorter then 5 character and click on submit to get a popover message that the name should be at least 5 characters
                 3. Fill in only whitespaces in the name field en click on submit to get a popover message that the name only contains whitespaces
-                4. Fill in a incorrect email (not xx@xx.xx) to get a message that this is incorrect
-            3. Click on the sound icon to play or pause the music
+                3. Fill in only numbers in the name field en click on submit to get a popover message that the name only contains numbers
+                5. Fill in a incorrect email (not xx@xx.xx) to get a message that this is incorrect
+                6. Fill in a meassage shorter then 10 character and click on submit to get a popover message that the name should be at least 10 characters
+                7. Click on the sound icon to play or pause the music
+                8. Fill in only whitespaces in the message field en click on submit to get a popover message that the message only contains whitespaces
     - Tablet and mobile
         1. Menu is hidden in hamburger icon
         2. Click on hamburger to open menu
