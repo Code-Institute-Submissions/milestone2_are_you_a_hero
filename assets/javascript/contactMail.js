@@ -38,19 +38,50 @@ function sendMail(contactForm) {
 /* Validates name entry and shows popup */
 function validateData() {
     var name = $("#name").val();
-
-    setTimeout(function() {
-        $("#submit").popover('dispose');
-    }, 3000);
+    var message = $("#message").val();
+    /* solution from https://stackoverflow.com/questions/9011524/regex-to-check-whether-a-string-contains-only-numbers */
+    var reg = /^\d+$/;
 
     if (name.length < 5) {
-        $("#submit").popover({ title: 'Error', content: "Name is to short, please fill in your name" });
+        $("#name").popover({ title: 'Error', content: "Name should be at least 5 characters" });
+        /* solution from https://stackoverflow.com/questions/40470513/bootstrap-popover-displayed-on-second-click */
+        $("#name").popover("show");
+        dispose("#name");
+
         return false;
 
     } else if ($.trim(name) == '') {
-        $("#submit").popover({ title: 'Error', content: "Name only contains whitespaces, please fill in your name" });
+        $("#name").popover({ title: 'Error', content: "Name only contains whitespaces, please fill in your name" });
+        $("#name").popover("show");
+        dispose("#name");
+
+        return false;
+
+    } else if (reg.test(name) == true) {
+        $("#name").popover({ title: 'Error', content: "Name only contains number, please fill in your name" });
+        $("#name").popover("show");
+        dispose("#name");
+
+        return false;
+
+    } else if (message.length < 5) {
+        $("#message").popover({ title: 'Error', content: "Message should be at least 10 characters" });
+        $("#message").popover("show");
+        dispose("#message");
+
+        return false;
+
+    } else if ($.trim(message) == '') {
+        $("#message").popover({ title: 'Error', content: "Message only contains whitespaces" });
+        $("#message").popover("show");
+        dispose("#message");
 
         return false;
     }
-    return true;
+};
+
+function dispose(id) {
+    setTimeout(function() {
+        $(id).popover('dispose');
+    }, 3000);
 };
