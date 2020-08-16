@@ -47,11 +47,12 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 
 
 ### Features Left to Implement
--   I would like to have the music play accross the site, even if you change pages within the website.
+-   I would like to have the music play accross the site, even if you change pages within the website. Or stay of if you paused it.
+-   When the sound of the winner is being playes it should mute/pause the music. 
 -   I want to put the languages in seperate JSON files.
 -   I want to let the content checked on grammar and spelling.
 -   Replace JSON file translation with a Google translation API.
--   More interaction in the quiz, not ony questions.
+-   More interaction in the quiz, not only questions for example "Put these things in order with drag and drop".
 
 
 ### Pages
@@ -125,7 +126,7 @@ Brief overview of the languages, frameworks, and other tools I've used on this p
 
 -   [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator)
 
-    -   Update of the Avengero font to use it in Firefox and IE
+    -   Update of the Avengero and Comic sans font to use it on different browsers.
 
 -   [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -146,21 +147,120 @@ Brief overview of the languages, frameworks, and other tools I've used on this p
 
 ## TESTING
 
-### TEST MATRIX
+### Manual testing
+All the manual tests where done by myself manually in Chrome, Opera, Safari and Firefox. 
+
+#### Test Matrix
 I used a testing matrix in Excel to test the script across several browsers and devices. I also added a file with question paths to come to all possible outcomes you can find the file here [Question paths](https://github.com/VolkovBos/milestone2_are_you_a_hero/tree/master/testing/Question_paths.png). The empty fields are question where there are no answers with scores for that character, if you randomly select an answer for those questions this will have a small impact on the outcome.
 
-### NOTED ISSUES
-- [x] The Avengero Fonts are not working in Safari as of the current commit. (resolved)
-- [x] The fonts are not working on mobile as of the current commit. (resolved)
-- [x] Comic sans font not working on mobile. (resolved)
-- [x] Hero modals on mobile not working correclty. (resolved)
-- [x] Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (resolved by changing the path to "assets/language/translation.json")
-- [x] Flags not always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG. (resolved)
-- [x] Modals of Thanos and Loki on result page not working. (resolved)
-- [x] On mobile the result page footer doesn't render correct. (resolved)
-- [x] The message of the email API isn't shown in the actual email. (resolved)
+#### Test
+1. All pages
+    - All devices
+        1. Menu:
+            1. Website name should be visible
+            2. Use all menu items and open other pages
+            3. Change the language when clicking on language in the menu
+            4. Navigate through the site within the chose language
+        2. When opening a new page, Avengers theme should play (see features left to implement), when autoplay is enabled and volume is on
+        3. Scroll up and down to see all content
+        4. Content should not be behind header or footer
+        5. Footer:
+            1. Click on name to open GitHub
+            2. Click on envelop icon to open email modal
+                1. Fill in all field and click on submit to send an email
+                    - The fields have placeholder text so you know what you have to fill in
+                    - When the form is send, the modal will disappear and a pop up with the text "Thank you for your message!" shows up
+                    - When you re-open the modal the fields have been made empty
+                2. Fill in a name shorter then 5 character and click on submit to get a popover message that the name is too short
+                3. Fill in only whitespaces in the name field en click on submit to get a popover message that the name only contains whitespaces
+                4. Fill in a incorrect email (not xx@xx.xx) to get a message that this is incorrect
+            3. Click on the sound icon to play or pause the music
+    - Tablet and mobile
+        1. Menu is hidden in hamburger icon
+        2. Click on hamburger to open menu
+        3. Hold down language item to select language
+2. Home page
+    - All devices
+        1.   A introduction is being given about the site and the creator
+    - Mobile
+        1. Check if images are being displayed in the bach rather then on the side
+3. Play page
+    1. A short introduction is being given about the quiz
+    2. A button with play is shown to start a quiz
+        1. Start the quiz
+        2. Answer 10 questions
+            - Questions and answers are being shown in order of 1 to 10
+            - Questions and answers which have been answered are hidden
+            - You'll get a click sound as confirmation that your answer is given
+        3. After the 10th question the result page is shown
+4. Result page
+    1. You  see 2 cards with information
+        1. Card should adjust on screen size (responsive)
+        - The left card
+            1. You'll get the 'winner' result of the quiz, which character you scored the most points on as shown on the heroes or villains pages.
+                1. Open the character information with the info button
+                2. Scroll down the page to see all the content
+                3. Close the modal with the close button, the x in de top right corner or with escape on a desktop
+        - The right card
+            1. You'll get the 'winner' result of the quiz, which character you scored the most points on as a header. 
+            2. You'll get the 'secondary' result of the quiz, which character you scored the second most points on as a text(although).
+            3. You'll get the 'winner' result of the quiz, which character you scored the most points on as a text.
+            4. You have a play again button
+                - Use the play again button and this must start the quiz again and skip the intro section of the play page
+                - Use play in the menu to open the play page and see the intro secion of this page
+    2. Check all the possiblie winners in the [Question paths](https://github.com/VolkovBos/milestone2_are_you_a_hero/tree/master/testing/Question_paths.png) document (at least in one device or browser)
+5. Heroes and villains pages
+    1. 8 cards with different characters should be displayed
+    2. Cards should adjust on screen size (responsive)
+    3. Open the character information with the info button
+    4. Scroll down the page to see all the content
+    5. Close the modal with the close button, the x in de top right corner or with escape on a desktop
+
+
+### Automatic testing
+I've used online validators to check my code. The validators that I've used are:
+
+[HTML Validator](https://validator.w3.org)
+[CSS Validator](https://jigsaw.w3.org/css-validator/)
+[JS Hint](https://jshint.com/)
+[Esprima](https://esprima.org/demo/validate.html)
+[JSONLint](https://jsonlint.com/)
+
+The HTML Validator let me know that I had empty elements, but that's a design choice for the translation. The CSS validator only validates against valid code. The vendor extensions are proprietary code. As such it will always be warned.
+
+I've used Jasmine to run some automatic tests on the most important JavaScript functions. 
+
+The [audio](https://volkovbos.github.io/milestone2_are_you_a_hero/testing/code/audio/index.html) function was tested, which checks if autoplay is enabled in your browser and if so the music must be playes automatically. I tested this locally beacuase when I ran it on Github I always got the message that my autoplay was disabled (when enabled). So to check the results, run the test on a local host. Also the play/pause functionality in the footer is tested.
+
+The counter function is tested on several ways. [First](https://volkovbos.github.io/milestone2_are_you_a_hero/testing/code/play/play.html) I've tested the given scores and tested the winner and second outcomes and [second](https://volkovbos.github.io/milestone2_are_you_a_hero/testing/code/play/play_button.html) I've tested the actual performed clicks on the answer by a user and matched this with the winner.
+
+As last I tested the [language](https://volkovbos.github.io/milestone2_are_you_a_hero/testing/code/translate/index.html) function for each language and checked if the called text is correct.
+
+Because the site is using sessionstorage, please note that when running these tests your sessionstorage should be empty. Run sessionStorage.clear() in the console of your browser when opening the pages.
+
+I coulnd't combine tests becaude of the syncronized running of several code, so I chose to make multiple jasmine tests.
+
+#### Noted issues
+- [x] The Avengero Fonts are not working in Safari as of the current commit.
+- [x] The fonts are not working on mobile as of the current commit.
+- [x] Comic sans font not working on mobile.
+    - Deleted all these fonts from my desktop for better testresults, changed/created new files with [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator) and added font-face in CSS file to fix all the above issues.
+- [x] Hero modals on mobile not working correclty.
+    - Changed the CSS accordingly.
+- [x] Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (r
+    - resolved by changing the path to "assets/language/translation.json"). This gave a issue with Jasmine testing so I have a copy of the language json file.
+- [x] Flags not always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG.
+    - Created new images from new files by hand.
+- [x] Modals of Thanos and Loki on result page not working.
+    - Gave al the card classes with the characters names. This also helped with catching the divs for the result page.
+- [x] On mobile the result page footer doesn't render correct.
+    - Changed the footer to fixed footer instead of stichy/absolute.
+- [x] The message of the email API isn't shown in the actual email.
+    - Changed the email template in the EmailJS UI.
 - [x] The required modal fields are not always shown as required.
-- [x] Changed the translation so that I call the JSON file(s) just once and not seperate for each element. ($.getJSON("assets/language/translation.json")
+    - Don't yet know how this is solved, the field where always required and now they work. I suspect this has to do with the translation.
+- [x] Downloading 30MB of data when opening the site.
+    - Changed the translation so that I call the JSON file(s) just once and not seperate for each data-translate element. ($.getJSON("assets/language/translation.json").
 
 
 ## DEPLOYMENT
