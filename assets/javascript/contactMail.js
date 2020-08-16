@@ -1,10 +1,11 @@
+var current_lang = sessionStorage.getItem("language");
+var trans;
+
 /* Email API EmailJS */
 function sendMail(contactForm) {
     /* variables from EmailJS account */
     var service_id = "gmail";
     var template_id = "marvel_fansite";
-    var current_lang = sessionStorage.getItem("language");
-    var trans;
 
     try {
         emailjs.send(service_id, template_id, {
@@ -42,42 +43,37 @@ function validateData() {
     /* solution from https://stackoverflow.com/questions/9011524/regex-to-check-whether-a-string-contains-only-numbers */
     var reg = /^\d+$/;
 
-    if (name.length < 5) {
-        $("#name").popover({ title: 'Error', content: "Name should be at least 5 characters" });
-        /* solution from https://stackoverflow.com/questions/40470513/bootstrap-popover-displayed-on-second-click */
-        $("#name").popover("show");
-        dispose("#name");
+    $.getJSON("assets/language/translation.json", (json) => {
+        if (name.length < 5) {
+            popoverMessage(json, "#name", "shortname");
+            return false;
 
-        return false;
+        } else if ($.trim(name) == '') {
+            popoverMessage(json, "#name", "spacesname");
+            return false;
 
-    } else if ($.trim(name) == '') {
-        $("#name").popover({ title: 'Error', content: "Name only contains whitespaces, please fill in your name" });
-        $("#name").popover("show");
-        dispose("#name");
+        } else if (reg.test(name) == true) {
+            popoverMessage(json, "#name", "numbersname");
+            return false;
 
-        return false;
+        } else if (message.length < 10) {
+            popoverMessage(json, "#message", "shortmessage");
+            return false;
 
-    } else if (reg.test(name) == true) {
-        $("#name").popover({ title: 'Error', content: "Name only contains number, please fill in your name" });
-        $("#name").popover("show");
-        dispose("#name");
+        } else if ($.trim(message) == '') {
+            popoverMessage(json, "#message", "spacesmessage");
+            return false;
+        }
+    });
+};
 
-        return false;
+function popoverMessage(json, id, error) {
+    trans = json[current_lang][error];
 
-    } else if (message.length < 5) {
-        $("#message").popover({ title: 'Error', content: "Message should be at least 10 characters" });
-        $("#message").popover("show");
-        dispose("#message");
-
-        return false;
-
-    } else if ($.trim(message) == '') {
-        $("#message").popover({ title: 'Error', content: "Message only contains whitespaces" });
-        $("#message").popover("show");
-        dispose("#message");
-
-        return false;
-    }
+    $(id).popover({ title: 'Error', content: trans });
+    /* solution from https://stackoverflow.com/questions/40470513/bootstrap-popover-displayed-on-second-click */
+    $(id).popover("show");
+    dispose(id);
 };
 
 function dispose(id) {
