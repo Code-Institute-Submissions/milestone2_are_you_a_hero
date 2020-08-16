@@ -44,11 +44,12 @@ I used MS Excel to create my wireframes and put them in a separate folder [Wiref
 -   Click sounds when answering questions, clicking buttons.
 -   A quiz with questions where the outcomes are one of the characters on the heroes or villains page.
 -   Validations on the email modal.
+-   Music plays accross the site, even if you change pages within the website. Or stay off if you paused it.
+-   When the sound of the winner is being played, the musicvolume is lower.
 
 
 ### Features Left to Implement
--   I would like to have the music play accross the site, even if you change pages within the website. Or stay of if you paused it.
--   When the sound of the winner is being playes it should mute/pause the music. 
+-   
 -   I want to put the languages in seperate JSON files.
 -   I want to let the content checked on grammar and spelling.
 -   Replace JSON file translation with a Google translation API.
@@ -161,10 +162,9 @@ I used a testing matrix in Excel to test the script across several browsers and 
             2. Use all menu items and open other pages
             3. Change the language when clicking on language in the menu
             4. Navigate through the site within the chose language
-        2. When opening a new page, Avengers theme should play (see features left to implement), when autoplay is enabled and volume is on
-        3. Scroll up and down to see all content
-        4. Content should not be behind header or footer
-        5. Footer:
+        2. Scroll up and down to see all content
+        3. Content should not be behind header or footer
+        4. Footer:
             1. Click on name to open GitHub
             2. Click on envelop icon to open email modal
                 1. Fill in all field and click on submit to send an email
@@ -184,7 +184,8 @@ I used a testing matrix in Excel to test the script across several browsers and 
         3. Hold down language item to select language
 2. Home page
     - All devices
-        1.   A introduction is being given about the site and the creator
+        1. A introduction is being given about the site and the creator
+        2. When opening a the site, Avengers theme should play (see features left to implement), when autoplay is enabled and volume is on
     - Mobile
         1. Check if images are being displayed in the bach rather then on the side
 3. Play page
