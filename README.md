@@ -247,7 +247,7 @@ I coulnd't combine tests becaude of the syncronized running of several code, so 
     - Deleted all these fonts from my desktop for better testresults, changed/created new files with [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator) and added font-face in CSS file to fix all the above issues.
 - [x] Hero modals on mobile not working correclty.
     - Changed the CSS accordingly.
-- [x] Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue. (r
+- [x] Github won't accept realative path in translate JS "../assets/language/translation.json". Works locally and in Gitpod so it seems this is a Github issue.
     - resolved by changing the path to "assets/language/translation.json"). This gave a issue with Jasmine testing so I have a copy of the language json file.
 - [x] Flags not always working correctly or loading. Locally I see that the German and English flag do not render as *.PNG.
     - Created new images from new files by hand.
